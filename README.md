@@ -6,9 +6,6 @@
 #### Hvilke utfordringer har brukeren?
 #### Hvilke interesser har brukeren?
 
-Brukeren har vanskelig for å lære seg språk, spesielt engelsk.
-Hun observerer at engelsk er et nyttig språk, som kommer igjen i mange sammenhenger.
-Brukeren liker spill og har konkurranse-instinkt. Motivasjonen øker når man ser fremgang i læringen, i form av poeng og økt mestringsfølelse.
 
 ## Applikasjon
 
