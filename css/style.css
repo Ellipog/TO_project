@@ -1,0 +1,32 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 1%;
+}
+
+button {
+    width: 40%;
+    margin: 1%;
+    height: 10%;
+}
+
+.box {
+    background-color: darkgrey;
+    width: 40%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
