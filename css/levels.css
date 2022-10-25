@@ -5,25 +5,88 @@ body {
     overflow: hidden;
     margin: 0;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: #7B9FC0;
+    
 }
-
+#header{
+    width: 100%;
+    display: flex;
+    flex-direction:row ;
+    justify-content: center;
+    align-content: center;
+    
+}
+#mainmenu{
+    width: 15%;
+    margin-left: 2%;
+}
+#progressbar{
+    width: 25%;
+}
+#answers{
+    width: 95%;
+    height: 50%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
 #answer1 {
-    color: #DB3333;
+    background-color: #D8DB33;
+    width: 30%;
+    height: 15%;
+    position: fixed;
+    left: 10%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    font-size: 50px;
 }
 
 #answer2 {
-    color: #D8DB33;
+    background-color: #00FFD1;
+    width: 30%;
+    height: 15%;
+    position: fixed;
+    right: 10%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    font-size: 50px;
 }
 
 #answer3 {
-    color: #3362DB;
+    background-color: #4471E4;
+    width: 30%;
+    height: 15%;
+    position: fixed;
+    left: 10%;
+    bottom: 10%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    font-size: 50px;
 }
 
-#answer3 {
-    color: #4ACA66;
+#answer4 {
+    background-color: #FF9900;
+    width: 30%;
+    height: 15%;
+    position: fixed;
+    right: 10%;
+    bottom: 10%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    font-size: 50px;
 }
