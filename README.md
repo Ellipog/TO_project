@@ -44,7 +44,7 @@ Når man er ferdig med å skrive så trykker man seg videre til neste oppgave.
 #### Database
 
 
-Jeg vil ha en database som kan holde spilleren oppdatert på progresjonen sin. Så spilleren må logge inn hver gang brukeren skal spille quizer. Jeg ville i så fall brukt SQL, Mamp og PhP MyAdmin for å lage databasen for dette er jeg kjent med.
+Jeg vil ha en database som kan holde spilleren oppdatert på progresjonen sin. Så spilleren må logge inn hver gang brukeren skal spille quizer. Jeg vil bruke SQL, Mamp og PhP MyAdmin for å lage databasen for dette er jeg kjent med. Så koble sammen frontend og databasen i backend, med JSON, node og express.js.
 
  Da ville jeg hatt to tabeller, den ene med brukerinformasjon:
 
