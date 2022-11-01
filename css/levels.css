@@ -8,85 +8,56 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: #7B9FC0;
-    
+    background-color: #E4EBF5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#header{
+
+#header {
     width: 100%;
     display: flex;
-    flex-direction:row ;
+    flex-direction: row;
     justify-content: center;
     align-content: center;
-    
 }
-#mainmenu{
+
+#mainmenu {
     width: 15%;
     margin-left: 2%;
 }
-#progressbar{
+
+#progressbar {
     width: 25%;
 }
-#answers{
+
+#answers {
     width: 95%;
     height: 50%;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
 }
-#answer1 {
-    background-color: #D8DB33;
-    width: 30%;
-    height: 15%;
-    position: fixed;
-    left: 10%;
+
+.answer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #E4EBF5;
+    width: 40%;
+    height: 30%;
+    margin: auto;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     border-radius: 10px;
     font-size: 50px;
+    border: 0px;
+    box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
+    transition: .1s ease-in-out;
 }
 
-#answer2 {
-    background-color: #00FFD1;
-    width: 30%;
-    height: 15%;
-    position: fixed;
-    right: 10%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 10px;
-    font-size: 50px;
+.answer:hover {
+    box-shadow: inset .3rem .3rem .6rem #c8d0e7, inset -.2rem -.2rem .5rem #FFFFFF;
 }
 
-#answer3 {
-    background-color: #4471E4;
-    width: 30%;
-    height: 15%;
-    position: fixed;
-    left: 10%;
-    bottom: 10%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 10px;
-    font-size: 50px;
-}
-
-#answer4 {
-    background-color: #FF9900;
-    width: 30%;
-    height: 15%;
-    position: fixed;
-    right: 10%;
-    bottom: 10%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 10px;
-    font-size: 50px;
+.answer:active {
+    box-shadow: inset .6rem .6rem .6rem #c8d0e7, inset -.5rem -.5rem .5rem #FFFFFF;
 }
