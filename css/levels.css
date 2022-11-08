@@ -8,9 +8,9 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: #E4EBF5;
+    background-color: #7B9FC0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #717e9c;
+    color: #c8c9cd;
 }
 
 #header {
@@ -26,8 +26,9 @@ body {
     margin-left: 2%;
 }
 
-#progressbar {
-    width: 25%;
+#progressbarBorder {
+    width: 80%;
+    justify-content: center;
 }
 
 #answers {
