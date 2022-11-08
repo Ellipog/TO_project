@@ -10,6 +10,7 @@ body {
     align-items: center;
     background-color: #E4EBF5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #717e9c;
 }
 
 #header {
@@ -31,7 +32,7 @@ body {
 
 #answers {
     width: 95%;
-    height: 50%;
+    height: 30%;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -48,10 +49,11 @@ body {
     display: flex;
     flex-wrap: wrap;
     border-radius: 10px;
-    font-size: 50px;
+    font-size: 36px;
     border: 0px;
     box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
     transition: .1s ease-in-out;
+    color: #717e9c;
 }
 
 .answer:hover {
@@ -60,4 +62,11 @@ body {
 
 .answer:active {
     box-shadow: inset .6rem .6rem .6rem #c8d0e7, inset -.5rem -.5rem .5rem #FFFFFF;
+}
+
+.fruitIMG {
+    border-radius: 10px;
+    height: 300px;
+    border: solid 0.1px #E4EBF5;
+    box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
 }
