@@ -15,7 +15,7 @@ var jsonData = {
           "Strawberry",
           "Blueberry"
         ],
-        "correct_answer": 1,
+        "correct_answer": 0,
         "hint":"Yellow Fruit"
       },
       {
@@ -27,7 +27,7 @@ var jsonData = {
           "Scones",
           "Nuggets"
         ],
-        "correct_answer": 2,
+        "correct_answer": 1,
         "hint":"Heart shaped"
       },
           {
@@ -39,7 +39,7 @@ var jsonData = {
           "Pie",
           "Mac'N Cheese"
         ],
-        "correct_answer": 3,
+        "correct_answer": 2,
         "hint":"Comes in a casserole"
       },
           {
@@ -51,7 +51,7 @@ var jsonData = {
           "Ceasar Salad",
           "Yoghurt"
         ],
-        "correct_answer": 3,
+        "correct_answer": 2,
         "hint":"A type of salad"
       },
           {
@@ -63,7 +63,7 @@ var jsonData = {
           "Fajitas",
           "Salmon"
         ],
-        "correct_answer": 4,
+        "correct_answer": 3,
         "hint": "Comes from the sea"
       },
           {
@@ -75,7 +75,7 @@ var jsonData = {
           "Smores",
           "Chicken wings"
         ],
-        "correct_answer": 3,
+        "correct_answer": 2,
         "hint": "Dessert"
       },
           {
@@ -87,7 +87,7 @@ var jsonData = {
           "Apple Pie",
           "Chocolate Chip Cookies"
         ],
-        "correct_answer": 4,
+        "correct_answer": 3,
         "hint":"Dessert"
       },
           {
@@ -99,7 +99,7 @@ var jsonData = {
           "Chicken and Rice",
           "Pizza"
         ],
-        "correct_answer": 1,
+        "correct_answer": 0,
         "hint":"Pasta and Meat"
       },
           {
@@ -111,7 +111,7 @@ var jsonData = {
           "Cheese Burger",
           "Turkey"
         ],
-        "correct_answer": 2,
+        "correct_answer": 1,
         "hint":"Sausage"
       },
           {
@@ -123,7 +123,7 @@ var jsonData = {
           "Beef stir fry",
           "Burritos"
         ],
-        "correct_answer": 4,
+        "correct_answer": 3,
         "hint":"looks like a taco"
       }
       
@@ -132,10 +132,22 @@ var jsonData = {
 
   var count = 0;
 
-  function answer_one() {
-    var question = jsonData.questions[count]
+  answers();
+
+  function answer() {
+    answers();
+  }
+
+  function answers() {
+    var question = jsonData.questions[count];
     var answer1 = question.answers[0];
+    var answer2 = question.answers[1];
+    var answer3 = question.answers[2];
+    var answer4 = question.answers[3];
     count++;
     document.getElementById("answer1").innerHTML = answer1;
+    document.getElementById("answer2").innerHTML = answer2;
+    document.getElementById("answer3").innerHTML = answer3;
+    document.getElementById("answer4").innerHTML = answer4;
     
   }
