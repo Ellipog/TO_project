@@ -2,11 +2,13 @@ var jsonData = {
     "module": {
         "number": 1,
         "name": "Level-one",
+        "images": 10,
         "questions": 10,
         "revision": "HUH"
     },
     "questions": [{
             "number": 1,
+            "images": "images/banana.jpeg",
             "question": "What food is this?",
             "answers": [
                 "Banana",
@@ -20,6 +22,7 @@ var jsonData = {
         {
             "number": 2,
             "question": "What food is this?",
+            "images": "images/waffle.jpeg",
             "answers": [
                 "Pancake",
                 "Waffle",
@@ -134,7 +137,11 @@ var count = 0;
 answers();
 
 function answer() {
-    blur()
+    blur();
+    var question = jsonData.images[count];
+    var images = images[0];
+    count++;
+    document.getElementById("img").src = images;
 }
 
 function blur() {
