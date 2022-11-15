@@ -134,21 +134,17 @@ var jsonData = {
 
 var count = 0;
 
-answers();
+nextAnswers();
 
 function answer() {
-    blur();
-    var question = jsonData.images[count];
-    var images = images[0];
-    count++;
-    document.getElementById("img").src = images;
+    blur()
 }
 
 function blur() {
     document.getElementById("blur").style.filter = "blur(5px)";
 }
 
-function answers() {
+function nextAnswers() {
     var question = jsonData.questions[count];
     var answer1 = question.answers[0];
     var answer2 = question.answers[1];
