@@ -131,17 +131,18 @@ var jsonData = {
 
 var count = 0;
 
-answers();
+nextAnswers();
 
 function answer() {
-    blur()
+    blur();
+
 }
 
 function blur() {
     document.getElementById("blur").style.filter = "blur(5px)";
 }
 
-function answers() {
+function nextAnswers() {
     var question = jsonData.questions[count];
     var answer1 = question.answers[0];
     var answer2 = question.answers[1];
