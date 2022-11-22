@@ -10,6 +10,7 @@ var jsonData = {
             "number": 1,
             "images": "images/banana.jpeg",
             "question": "What food is this?",
+            "images": "images/banana.jpeg",
             "answers": [
                 "Banana",
                 "Apple",
@@ -136,16 +137,53 @@ var count = 0;
 
 nextAnswers();
 
-function answer() {
-    blur()
+function answer(answer) {
+    var question = jsonData.questions[count];
+    var correct = question.correct_answer;
+    switch (answer) {
+        case 1:
+            if (question.correct_answer === 1) {
+                document.getElementById("nextText").innerHTML = "Correct";
+            } else {
+                document.getElementById("nextText").innerHTML = "Wrong";
+            }
+            break;
+        case 2:
+            if (question.correct_answer === 2) {
+                document.getElementById("nextText").innerHTML = "Correct";
+            } else {
+                document.getElementById("nextText").textContent = "Wrong";
+            }
+            break;
+        case 3:
+            if (question.correct_answer === 3) {
+                document.getElementById("nextText").textContent = "Correct";
+            } else {
+                document.getElementById("nextText").textContent = "Wrong";
+            }
+            break;
+        case 4:
+            if (question.correct_answer === 4) {
+                document.getElementById("nextText").textContent = "Correct";
+            } else {
+                document.getElementById("nextText").textContent = "Wrong";
+            }
+            break;
+        default:
+
+    }
+    blur();
 }
 
 function blur() {
     document.getElementById("blur").style.filter = "blur(5px)";
+    document.getElementById("next").style.display = "flex";
 }
 
 function nextAnswers() {
     var question = jsonData.questions[count];
+    var image = question.images;
+    var correct = question.correct_answer;
     var answer1 = question.answers[0];
     var answer2 = question.answers[1];
     var answer3 = question.answers[2];
@@ -155,5 +193,7 @@ function nextAnswers() {
     document.getElementById("answer2").innerHTML = answer2;
     document.getElementById("answer3").innerHTML = answer3;
     document.getElementById("answer4").innerHTML = answer4;
-
+    document.getElementById("image").src = image;
+    document.getElementById("blur").style.filter = "blur(0px)";
+    document.getElementById("next").style.display = "none";
 }

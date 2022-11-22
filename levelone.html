@@ -5,9 +5,14 @@
     <link href="css/levels.css" rel="stylesheet">
     <title>Level 1</title>
     <meta charset="utf-8">
+    <script defer src="js/levelone.js"></script>
 </head>
 
 <body>
+    <div id="next">
+        <p id="nextText"></p>
+        <button id="nextAnswers" class="answer" onclick="nextAnswers();">Next Question</button>
+    </div>
     <div id="blur">
         <div id="header">
             <div id="Mainmenu">Main menu</div>
@@ -19,19 +24,17 @@
         <div id="question">
             <h1>What food is this?</h1>
             <div id="picture">
-                <img src="images/banana.jpeg" class="fruitIMG" alt="banana">
+                <img src="images/banana.jpeg" class="fruitIMG" id="image" alt="banana">
             </div>
             <h2>Show hint</h2>
         </div>
         <div id="answers">
-            <button id="answer1" class="answer" onclick="answer();"></button>
-            <button id="answer2" class="answer" onclick="answer();"></button>
-            <button id="answer3" class="answer" onclick="answer();"></button>
-            <button id="answer4" class="answer" onclick="answer();"></button>
+            <button id="answer1" class="answer" onclick="answer(1);"></button>
+            <button id="answer2" class="answer" onclick="answer(2);"></button>
+            <button id="answer3" class="answer" onclick="answer(3);"></button>
+            <button id="answer4" class="answer" onclick="answer(4);"></button>
         </div>
     </div>
-    <script src="js/levelone.js"></script>
-
 </body>
 
 </html>
