@@ -18,7 +18,7 @@ var jsonData = {
                 "Blueberry"
             ],
             "correct_answer": 0,
-            "hint": "Yellow Fruit"
+            "hint": "Yellow"
         },
         {
             "number": 2,
@@ -31,7 +31,7 @@ var jsonData = {
                 "Nuggets"
             ],
             "correct_answer": 1,
-            "hint": "Heart shaped"
+            "hint": "Ruter"
         },
         {
             "number": 3,
