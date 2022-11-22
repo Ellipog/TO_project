@@ -26,6 +26,8 @@ h1{
 .levels{
     width: 50%;
     height: 10%;
+    display: flex;
+    flex-direction: row;
     background-color: #E4EBF5;
     margin: 1%;
     justify-content: center;
