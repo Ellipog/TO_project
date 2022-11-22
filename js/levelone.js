@@ -8,9 +8,8 @@ var jsonData = {
     },
     "questions": [{
             "number": 1,
-            "images": "images/banana.jpeg",
             "question": "What food is this?",
-            "images": "images/banana.jpeg",
+            "images": "images/banana.png",
             "answers": [
                 "Banana",
                 "Apple",
@@ -23,7 +22,7 @@ var jsonData = {
         {
             "number": 2,
             "question": "What food is this?",
-            "images": "images/waffle.jpeg",
+            "images": "images/waffle.png",
             "answers": [
                 "Pancake",
                 "Waffle",
@@ -36,6 +35,7 @@ var jsonData = {
         {
             "number": 3,
             "question": "What food is this?",
+            "images": "images/pie.png",
             "answers": [
                 "Taco",
                 "Steak",
@@ -48,6 +48,7 @@ var jsonData = {
         {
             "number": 4,
             "question": "What food is this?",
+            "images": "images/ceasarsalad.png",
             "answers": [
                 "Corn Flakes",
                 "Mushrooms",
@@ -60,6 +61,7 @@ var jsonData = {
         {
             "number": 5,
             "question": "What food is this?",
+            "images": "images/salmon.png",
             "answers": [
                 "Tater Tots",
                 "Bread",
@@ -72,6 +74,7 @@ var jsonData = {
         {
             "number": 6,
             "question": "What food is this?",
+            "images": "images/smores.png",
             "answers": [
                 "P&J Sandwich",
                 "Enchiladas",
@@ -84,11 +87,12 @@ var jsonData = {
         {
             "number": 7,
             "question": "What food is this?",
+            "images": "images/cookies.png",
             "answers": [
                 "Lasagne",
                 "BBQ Ribs",
                 "Apple Pie",
-                "Chocolate Chip Cookies"
+                "Cookies"
             ],
             "correct_answer": 3,
             "hint": "Dessert"
@@ -96,6 +100,7 @@ var jsonData = {
         {
             "number": 8,
             "question": "What food is this?",
+            "images": "images/stroganof.png",
             "answers": [
                 "Beef Stroganof",
                 "Spagetthi and Meatballs",
@@ -108,6 +113,7 @@ var jsonData = {
         {
             "number": 9,
             "question": "What food is this?",
+            "images": "images/hotdogs.png",
             "answers": [
                 "Nachos",
                 "Hot Dogs",
@@ -120,8 +126,9 @@ var jsonData = {
         {
             "number": 10,
             "question": "What food is this?",
+            "images": "images/burritos.png",
             "answers": [
-                "Spaghetti and meatballs",
+                "Spaghetti",
                 "Fried chicken",
                 "Beef stir fry",
                 "Burritos"
@@ -134,6 +141,9 @@ var jsonData = {
 }
 
 var count = 0;
+var frames1 = 0;
+var frames2 = 0;
+var progress = 0;
 
 nextAnswers();
 
@@ -172,11 +182,28 @@ function answer(answer) {
         default:
 
     }
+    progress += 10;
+    progressBar();
     blur();
 }
 
 function blur() {
-    document.getElementById("blur").style.filter = "blur(5px)";
+    if (frames2 == 0) {
+        frames2 = 1;
+        var blurCSS = document.getElementById("blur");
+        var blurAmount = 0;
+        var id = setInterval(frame, 20);
+
+        function frame() {
+            if (blurAmount >= 10) {
+                clearInterval(id);
+                frames2 = 0;
+            } else {
+                blurAmount++;
+                blurCSS.style.filter = "blur(" + blurAmount + "px)";
+            }
+        }
+    }
     document.getElementById("next").style.display = "flex";
 }
 
@@ -196,4 +223,25 @@ function nextAnswers() {
     document.getElementById("image").src = image;
     document.getElementById("blur").style.filter = "blur(0px)";
     document.getElementById("next").style.display = "none";
+}
+
+function progressBar() {
+    if (frames1 == 0) {
+        frames1 = 1;
+        var status = document.getElementById("status");
+        var statusText = document.getElementById("statusText");
+        var width = progress - 10;
+        var id = setInterval(frame, 10);
+
+        function frame() {
+            if (width >= progress) {
+                clearInterval(id);
+                frames1 = 0;
+            } else {
+                width++;
+                status.style.width = width + "%";
+            }
+        }
+    }
+    statusText.innerHTML = width / 10 + 1 + " / 10";
 }
