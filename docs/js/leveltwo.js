@@ -8,91 +8,91 @@ var jsonData = {
     },
     "questions": [{
             "number": 1,
-            "question": "Hvilket kjøkken-redskap er dette?",
+            "question": "What is this?",
             "images": "images/banana.png",
             "answers": [
-                "Banana",
-                "Apple",
-                "Strawberry",
-                "Blueberry"
+                "Fork",
+                "Glass",
+                "Blender",
+                "Sink"
             ],
             "correct_answer": 3,
-            "hint": "Yellow"
+            "hint": ""
         },
         {
             "number": 2,
-            "question": "Hvilket kjøkken-redskap er dette?",
+            "question": "What is this?",
             "images": "images/waffle.png",
             "answers": [
-                "Pancake",
-                "Waffle",
-                "Scones",
-                "Nuggets"
+                "Bowl",
+                "Dishwasher",
+                "Knife",
+                "Pokemon"
             ],
             "correct_answer": 2,
             "hint": "Ruter"
         },
         {
             "number": 3,
-            "question": "Hvilket kjøkken-redskap er dette?",
+            "question": "What is this?",
             "images": "images/pie.png",
             "answers": [
-                "Taco",
-                "Steak",
-                "Pie",
-                "Mac'N Cheese"
+                "A Mug",
+                "Boiler",
+                "Bread Knife",
+                "Spoon"
             ],
             "correct_answer": 0,
             "hint": "Comes in a casserole"
         },
         {
             "number": 4,
-            "question": "Hvilket kjøkken-redskap er dette?",
+            "question": "What is this??",
             "images": "images/ceasarsalad.png",
             "answers": [
-                "Corn Flakes",
-                "Mushrooms",
-                "Ceasar Salad",
-                "Yoghurt"
+                "Coffee maker",
+                "Waffle Iron",
+                "Whisk",
+                "Frying Pan"
             ],
             "correct_answer": 2,
             "hint": "A type of salad"
         },
         {
             "number": 5,
-            "question": "Hvilket kjøkken-redskap er dette?",
+            "question": "What is this?",
             "images": "images/salmon.png",
             "answers": [
-                "Tater Tots",
-                "Bread",
-                "Fajitas",
-                "Salmon"
+                "Toaster",
+                "Freezer",
+                "Can Opener",
+                "Measuring Jug"
             ],
             "correct_answer": 1,
             "hint": "Comes from the sea"
         },
         {
             "number": 6,
-            "question": "Hvilket kjøkken-redskap er dette?",
+            "question": "What is this?",
             "images": "images/smores.png",
             "answers": [
-                "P&J Sandwich",
-                "Enchiladas",
-                "Smores",
-                "Chicken wings"
+                "Spatula",
+                "Corkskrew",
+                "Oven Gloves",
+                "Aluminium foil"
             ],
             "correct_answer": 0,
             "hint": "Dessert"
         },
         {
             "number": 7,
-            "question": "Hvilket kjøkken-redskap er dette?",
+            "question": "What is this?",
             "images": "images/cookies.png",
             "answers": [
-                "Lasagne",
-                "BBQ Ribs",
-                "Apple Pie",
-                "Cookies"
+                "Fridge",
+                "Kitchen scales",
+                "Pizza Cutter",
+                "Vegetable peeler"
             ],
             "correct_answer": 3,
             "hint": "Dessert"
@@ -102,10 +102,10 @@ var jsonData = {
             "question": "Hvilket kjøkken-redskap er dette?",
             "images": "images/stroganof.png",
             "answers": [
-                "Beef Stroganof",
-                "Spagetthi and Meatballs",
-                "Chicken and Rice",
-                "Pizza"
+                "Microwave",
+                "Plastic wrap",
+                "Teaspoon",
+                "Kettle"
             ],
             "correct_answer": 2,
             "hint": "Pasta and Meat"
@@ -115,10 +115,10 @@ var jsonData = {
             "question": "Hvilket kjøkken-redskap er dette?",
             "images": "images/hotdogs.png",
             "answers": [
-                "Nachos",
-                "Hot Dogs",
-                "Cheese Burger",
-                "Turkey"
+                "Casserole",
+                "Kitchen scissors",
+                "Drainer",
+                "Laddle"
             ],
             "correct_answer": 2,
             "hint": "Sausage"
@@ -128,10 +128,10 @@ var jsonData = {
             "question": "Hvilket kjøkken-redskap er dette?",
             "images": "images/burritos.png",
             "answers": [
-                "Spaghetti",
-                "Fried chicken",
-                "Beef stir fry",
-                "Burritos"
+                "Bottles",
+                "Thermos",
+                "Cutting board",
+                "Napkin"
             ],
             "correct_answer": 0,
             "hint": "looks like a taco"
