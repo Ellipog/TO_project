@@ -8,7 +8,7 @@ var jsonData = {
     },
     "questions": [{
             "number": 1,
-            "question": "What food is this?",
+            "question": "Hvilket kjøkken-redskap er dette?",
             "images": "images/banana.png",
             "answers": [
                 "Banana",
@@ -16,12 +16,12 @@ var jsonData = {
                 "Strawberry",
                 "Blueberry"
             ],
-            "correct_answer": 0,
+            "correct_answer": 3,
             "hint": "Yellow"
         },
         {
             "number": 2,
-            "question": "What food is this?",
+            "question": "Hvilket kjøkken-redskap er dette?",
             "images": "images/waffle.png",
             "answers": [
                 "Pancake",
@@ -29,12 +29,12 @@ var jsonData = {
                 "Scones",
                 "Nuggets"
             ],
-            "correct_answer": 1,
+            "correct_answer": 2,
             "hint": "Ruter"
         },
         {
             "number": 3,
-            "question": "What food is this?",
+            "question": "Hvilket kjøkken-redskap er dette?",
             "images": "images/pie.png",
             "answers": [
                 "Taco",
@@ -42,12 +42,12 @@ var jsonData = {
                 "Pie",
                 "Mac'N Cheese"
             ],
-            "correct_answer": 2,
+            "correct_answer": 0,
             "hint": "Comes in a casserole"
         },
         {
             "number": 4,
-            "question": "What food is this?",
+            "question": "Hvilket kjøkken-redskap er dette?",
             "images": "images/ceasarsalad.png",
             "answers": [
                 "Corn Flakes",
@@ -60,7 +60,7 @@ var jsonData = {
         },
         {
             "number": 5,
-            "question": "What food is this?",
+            "question": "Hvilket kjøkken-redskap er dette?",
             "images": "images/salmon.png",
             "answers": [
                 "Tater Tots",
@@ -68,12 +68,12 @@ var jsonData = {
                 "Fajitas",
                 "Salmon"
             ],
-            "correct_answer": 3,
+            "correct_answer": 1,
             "hint": "Comes from the sea"
         },
         {
             "number": 6,
-            "question": "What food is this?",
+            "question": "Hvilket kjøkken-redskap er dette?",
             "images": "images/smores.png",
             "answers": [
                 "P&J Sandwich",
@@ -81,12 +81,12 @@ var jsonData = {
                 "Smores",
                 "Chicken wings"
             ],
-            "correct_answer": 2,
+            "correct_answer": 0,
             "hint": "Dessert"
         },
         {
             "number": 7,
-            "question": "What food is this?",
+            "question": "Hvilket kjøkken-redskap er dette?",
             "images": "images/cookies.png",
             "answers": [
                 "Lasagne",
@@ -99,7 +99,7 @@ var jsonData = {
         },
         {
             "number": 8,
-            "question": "What food is this?",
+            "question": "Hvilket kjøkken-redskap er dette?",
             "images": "images/stroganof.png",
             "answers": [
                 "Beef Stroganof",
@@ -107,12 +107,12 @@ var jsonData = {
                 "Chicken and Rice",
                 "Pizza"
             ],
-            "correct_answer": 0,
+            "correct_answer": 2,
             "hint": "Pasta and Meat"
         },
         {
             "number": 9,
-            "question": "What food is this?",
+            "question": "Hvilket kjøkken-redskap er dette?",
             "images": "images/hotdogs.png",
             "answers": [
                 "Nachos",
@@ -120,12 +120,12 @@ var jsonData = {
                 "Cheese Burger",
                 "Turkey"
             ],
-            "correct_answer": 1,
+            "correct_answer": 2,
             "hint": "Sausage"
         },
         {
             "number": 10,
-            "question": "What food is this?",
+            "question": "Hvilket kjøkken-redskap er dette?",
             "images": "images/burritos.png",
             "answers": [
                 "Spaghetti",
@@ -133,7 +133,7 @@ var jsonData = {
                 "Beef stir fry",
                 "Burritos"
             ],
-            "correct_answer": 3,
+            "correct_answer": 0,
             "hint": "looks like a taco"
         }
 
