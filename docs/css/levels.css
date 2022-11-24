@@ -83,7 +83,6 @@ body {
 .fruitIMG {
     border-radius: 10px;
     height: 250px;
-    width: 300px;
     border: solid 0.1px #E4EBF5;
     box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
 }

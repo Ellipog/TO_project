@@ -144,39 +144,49 @@ var count = 0;
 var frames1 = 0;
 var frames2 = 0;
 var progress = 0;
+var counter = 0;
 
 nextAnswers();
 
 function answer(answer) {
+    count--;
     var question = jsonData.questions[count];
     var correct = question.correct_answer;
     switch (answer) {
-        case 1:
-            if (question.correct_answer === 1) {
+        case 0:
+            if (correct === 0) {
                 document.getElementById("nextText").innerHTML = "Correct";
+                count++;
             } else {
                 document.getElementById("nextText").innerHTML = "Wrong";
+                count++;
+            }
+            break;
+        case 1:
+            if (correct === 1) {
+                document.getElementById("nextText").innerHTML = "Correct";
+                count++;
+            } else {
+                document.getElementById("nextText").textContent = "Wrong";
+                count++;
             }
             break;
         case 2:
-            if (question.correct_answer === 2) {
-                document.getElementById("nextText").innerHTML = "Correct";
+            if (correct === 2) {
+                document.getElementById("nextText").textContent = "Correct";
+                count++;
             } else {
                 document.getElementById("nextText").textContent = "Wrong";
+                count++;
             }
             break;
         case 3:
-            if (question.correct_answer === 3) {
+            if (correct === 3) {
                 document.getElementById("nextText").textContent = "Correct";
+                console.log(question.correct_answer);
             } else {
                 document.getElementById("nextText").textContent = "Wrong";
-            }
-            break;
-        case 4:
-            if (question.correct_answer === 4) {
-                document.getElementById("nextText").textContent = "Correct";
-            } else {
-                document.getElementById("nextText").textContent = "Wrong";
+                console.log(question.correct_answer);
             }
             break;
         default:
