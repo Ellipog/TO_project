@@ -9,27 +9,26 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: #99b4ea;
+    background-color: #7B9FC0;
 }
-h1{
-    font-size: 200%;
-    margin-top: 5%;
+#welcome{
+    font-size: 300%;
 }
 #gamemenu {
     width: 100%;
-    height: 85%;
+    height: 850%;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
 }
 .levels{
-    width: 50%;
+    width: 65%;
     height: 10%;
     display: flex;
     flex-direction: row;
-    background-color: #E4EBF5;
     margin: 1%;
+    background-color: #E4EBF5;
     justify-content: center;
     text-align: center;
     font-size: 250%;
