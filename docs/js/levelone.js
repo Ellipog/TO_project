@@ -30,7 +30,7 @@ var jsonData = {
                 "Nuggets"
             ],
             "correct_answer": 1,
-            "hint": "Ruter"
+            "hint": "Heart shaped"
         },
         {
             "number": 3,
@@ -144,7 +144,6 @@ var count = 0;
 var frames1 = 0;
 var frames2 = 0;
 var progress = 0;
-var counter = 0;
 
 nextAnswers();
 
@@ -155,46 +154,59 @@ function answer(answer) {
     switch (answer) {
         case 0:
             if (correct === 0) {
-                document.getElementById("nextText").innerHTML = "Correct";
+                resultsButton();
+                document.getElementById("nextText").textContent = "Riktig";
                 count++;
             } else {
-                document.getElementById("nextText").innerHTML = "Wrong";
+                resultsButton();
+                document.getElementById("nextText").textContent = "Feil";
                 count++;
             }
             break;
         case 1:
             if (correct === 1) {
-                document.getElementById("nextText").innerHTML = "Correct";
+                resultsButton();
+                document.getElementById("nextText").textContent = "Riktig";
                 count++;
             } else {
-                document.getElementById("nextText").textContent = "Wrong";
+                resultsButton();
+                document.getElementById("nextText").textContent = "Feil";
                 count++;
             }
             break;
         case 2:
             if (correct === 2) {
-                document.getElementById("nextText").textContent = "Correct";
+                resultsButton();
+                document.getElementById("nextText").textContent = "Riktig";
                 count++;
             } else {
-                document.getElementById("nextText").textContent = "Wrong";
+                resultsButton();
+                document.getElementById("nextText").textContent = "Feil";
                 count++;
             }
             break;
         case 3:
             if (correct === 3) {
-                document.getElementById("nextText").textContent = "Correct";
-                console.log(question.correct_answer);
+                resultsButton();
+                document.getElementById("nextText").textContent = "Riktig";
+                count++;
             } else {
-                document.getElementById("nextText").textContent = "Wrong";
-                console.log(question.correct_answer);
+                resultsButton();
+                document.getElementById("nextText").textContent = "Feil";
+                count++;
             }
             break;
         default:
-
     }
     progress += 10;
     progressBar();
     blur();
+}
+
+function resultsButton() {
+    if (count === 9) {
+        document.getElementById("nextAnswers").textContent = "Resultater";
+    }
 }
 
 function blur() {
@@ -218,6 +230,14 @@ function blur() {
 }
 
 function nextAnswers() {
+    if (count === 10) {
+        final();
+    } else {
+        next();
+    }
+}
+
+function next() {
     var question = jsonData.questions[count];
     var image = question.images;
     var correct = question.correct_answer;
@@ -233,6 +253,12 @@ function nextAnswers() {
     document.getElementById("image").src = image;
     document.getElementById("blur").style.filter = "blur(0px)";
     document.getElementById("next").style.display = "none";
+}
+
+function final() {
+    document.getElementById("blur").style.display = "none";
+    document.getElementById("next").style.display = "none";
+    document.getElementById("final").style.display = "flex";
 }
 
 function progressBar() {
