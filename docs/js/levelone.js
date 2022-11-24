@@ -1,4 +1,4 @@
-var jsonData = {
+const jsonData = {
     "module": {
         "number": 1,
         "name": "Level-one",
