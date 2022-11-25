@@ -143,7 +143,9 @@ const jsonData = {
 var count = 0;
 var frames1 = 0;
 var frames2 = 0;
+var frames3 = 0;
 var progress = 0;
+var redProgress = 0;
 
 nextAnswers();
 
@@ -157,10 +159,12 @@ function answer(answer) {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Riktig";
                 count++;
+                progressBar();
             } else {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Feil";
                 count++;
+                failProgressBar();
             }
             break;
         case 1:
@@ -168,10 +172,12 @@ function answer(answer) {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Riktig";
                 count++;
+                progressBar();
             } else {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Feil";
                 count++;
+                failProgressBar();
             }
             break;
         case 2:
@@ -179,10 +185,12 @@ function answer(answer) {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Riktig";
                 count++;
+                progressBar();
             } else {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Feil";
                 count++;
+                failProgressBar();
             }
             break;
         case 3:
@@ -190,16 +198,16 @@ function answer(answer) {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Riktig";
                 count++;
+                progressBar();
             } else {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Feil";
                 count++;
+                failProgressBar();
             }
             break;
         default:
     }
-    progress += 10;
-    progressBar();
     blur();
 }
 
@@ -262,6 +270,10 @@ function final() {
 }
 
 function progressBar() {
+    progress += 10;
+    if (progress >= 9) {
+        document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
+    }
     if (frames1 == 0) {
         frames1 = 1;
         var status = document.getElementById("status");
@@ -276,6 +288,31 @@ function progressBar() {
             } else {
                 width++;
                 status.style.width = width + "%";
+            }
+        }
+    }
+    statusText.innerHTML = width / 10 + 1 + " / 10";
+}
+
+function failProgressBar() {
+    redProgress += 10;
+    if (progress >= 9) {
+        document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
+    }
+    if (frames3 == 0) {
+        frames3 = 1;
+        var redStatus = document.getElementById("redStatus");
+        var statusText = document.getElementById("statusText");
+        var width = redProgress - 10;
+        var id = setInterval(frame, 10);
+
+        function frame() {
+            if (width >= redProgress) {
+                clearInterval(id);
+                frames3 = 0;
+            } else {
+                width++;
+                redStatus.style.width = width + "%";
             }
         }
     }

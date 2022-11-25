@@ -50,6 +50,13 @@ body {
     background-color: #90EE90;
 }
 
+#redStatus {
+    width: 0%;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+    background-color: #d54040;
+}
+
 #status-text {
     position: fixed;
     left: 48%;
