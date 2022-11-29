@@ -291,7 +291,7 @@ function progressBar() {
             }
         }
     }
-    statusText.innerHTML = width / 10 + 1 + " / 10";
+    statusText.innerHTML = (progress + redProgress) / 10 + " / 10";
 }
 
 function failProgressBar() {
@@ -316,5 +316,5 @@ function failProgressBar() {
             }
         }
     }
-    statusText.innerHTML = width / 10 + 1 + " / 10";
+    statusText.innerHTML = (progress + redProgress) / 10 + " / 10";
 }
