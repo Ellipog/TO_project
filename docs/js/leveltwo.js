@@ -9,7 +9,7 @@ var jsonData = {
     "questions": [{
             "number": 1,
             "question": "What is this?",
-            "images": "images/banana.png",
+            "images": "images/sink.png",
             "answers": [
                 "Fork",
                 "Glass",
@@ -22,7 +22,7 @@ var jsonData = {
         {
             "number": 2,
             "question": "What is this?",
-            "images": "images/waffle.png",
+            "images": "images/knife.png",
             "answers": [
                 "Bowl",
                 "Dishwasher",
@@ -35,7 +35,7 @@ var jsonData = {
         {
             "number": 3,
             "question": "What is this?",
-            "images": "images/pie.png",
+            "images": "images/mug.png",
             "answers": [
                 "A Mug",
                 "Boiler",
