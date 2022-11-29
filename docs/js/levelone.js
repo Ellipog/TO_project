@@ -235,6 +235,7 @@ function blur() {
         }
     }
     document.getElementById("next").style.display = "flex";
+    document.getElementById("answers").style.display = "none";
 }
 
 function nextAnswers() {
@@ -261,6 +262,7 @@ function next() {
     document.getElementById("image").src = image;
     document.getElementById("blur").style.filter = "blur(0px)";
     document.getElementById("next").style.display = "none";
+    document.getElementById("answers").style.display = "flex";
 }
 
 function final() {
@@ -291,7 +293,7 @@ function progressBar() {
             }
         }
     }
-    statusText.innerHTML = width / 10 + 1 + " / 10";
+    statusText.innerHTML = (progress + redProgress) / 10 + " / 10";
 }
 
 function failProgressBar() {
@@ -316,5 +318,5 @@ function failProgressBar() {
             }
         }
     }
-    statusText.innerHTML = width / 10 + 1 + " / 10";
+    statusText.innerHTML = (progress + redProgress) / 10 + " / 10";
 }
