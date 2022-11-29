@@ -48,7 +48,7 @@ const jsonData = {
         {
             "number": 4,
             "question": "What is this??",
-            "images": "images/ceasarsalad.png",
+            "images": "images/whisk.png",
             "answers": [
                 "Coffee maker",
                 "Waffle Iron",
@@ -61,7 +61,7 @@ const jsonData = {
         {
             "number": 5,
             "question": "What is this?",
-            "images": "images/salmon.png",
+            "images": "images/freezer.png",
             "answers": [
                 "Toaster",
                 "Freezer",
@@ -74,7 +74,7 @@ const jsonData = {
         {
             "number": 6,
             "question": "What is this?",
-            "images": "images/smores.png",
+            "images": "images/spatula.png",
             "answers": [
                 "Spatula",
                 "Corkskrew",
@@ -87,7 +87,7 @@ const jsonData = {
         {
             "number": 7,
             "question": "What is this?",
-            "images": "images/cookies.png",
+            "images": "images/vegetablepeeler.png",
             "answers": [
                 "Fridge",
                 "Kitchen scales",
@@ -100,7 +100,7 @@ const jsonData = {
         {
             "number": 8,
             "question": "Hvilket kjøkken-redskap er dette?",
-            "images": "images/stroganof.png",
+            "images": "images/teaspoon.png",
             "answers": [
                 "Microwave",
                 "Plastic wrap",
@@ -113,11 +113,11 @@ const jsonData = {
         {
             "number": 9,
             "question": "Hvilket kjøkken-redskap er dette?",
-            "images": "images/hotdogs.png",
+            "images": "images/strainer.png",
             "answers": [
                 "Casserole",
                 "Kitchen scissors",
-                "Drainer",
+                "Strainer",
                 "Laddle"
             ],
             "correct_answer": 2,
@@ -126,7 +126,7 @@ const jsonData = {
         {
             "number": 10,
             "question": "Hvilket kjøkken-redskap er dette?",
-            "images": "images/burritos.png",
+            "images": "images/bottles.png",
             "answers": [
                 "Bottles",
                 "Thermos",
