@@ -11,6 +11,15 @@ body {
     align-items: center;
     background-color: #7B9FC0;
 }
+.leveltext{
+    justify-content: center;
+    font-size: 100%;
+}
+.leveltheme{
+    justify-content: center;
+    font-size: 100%;
+    margin-left: 20%;
+}
 #welcome{
     font-size: 300%;
     height: 5%;
@@ -27,11 +36,9 @@ body {
     width: 65%;
     height: 10%;
     display: flex;
-    flex-direction: row;
     margin: 1%;
     background-color: #E4EBF5;
     justify-content: center;
-    text-align: center;
     font-size: 250%;
     border-radius: 20px;
 }

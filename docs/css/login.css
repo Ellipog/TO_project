@@ -17,9 +17,14 @@ h1 {
     margin-bottom: 1%;
     font-size: 500%;
 }
-p{
+.leveltext{
     font-size: 200%;
 }
+.leveltheme{
+    font-size: 200%;
+}
+
+
 input{
     background-color: #d6d6d6;
     width: 80%;
