@@ -1,4 +1,4 @@
-var jsonData = {
+const jsonData = {
     "module": {
         "number": 1,
         "name": "Level-one",
@@ -9,7 +9,7 @@ var jsonData = {
     "questions": [{
             "number": 1,
             "question": "What is this?",
-            "images": "images/banana.png",
+            "images": "images/sink.png",
             "answers": [
                 "Fork",
                 "Glass",
@@ -17,12 +17,12 @@ var jsonData = {
                 "Sink"
             ],
             "correct_answer": 3,
-            "hint": ""
+            "hint": "la det synke inn"
         },
         {
             "number": 2,
             "question": "What is this?",
-            "images": "images/waffle.png",
+            "images": "images/knife.png",
             "answers": [
                 "Bowl",
                 "Dishwasher",
@@ -35,7 +35,7 @@ var jsonData = {
         {
             "number": 3,
             "question": "What is this?",
-            "images": "images/pie.png",
+            "images": "images/mug.png",
             "answers": [
                 "A Mug",
                 "Boiler",
@@ -143,8 +143,9 @@ var jsonData = {
 var count = 0;
 var frames1 = 0;
 var frames2 = 0;
+var frames3 = 0;
 var progress = 0;
-var counter = 0;
+var redProgress = 0;
 
 nextAnswers();
 
@@ -155,46 +156,65 @@ function answer(answer) {
     switch (answer) {
         case 0:
             if (correct === 0) {
-                document.getElementById("nextText").innerHTML = "Correct";
+                resultsButton();
+                document.getElementById("nextText").textContent = "Riktig";
                 count++;
+                progressBar();
             } else {
-                document.getElementById("nextText").innerHTML = "Wrong";
+                resultsButton();
+                document.getElementById("nextText").textContent = "Feil";
                 count++;
+                failProgressBar();
             }
             break;
         case 1:
             if (correct === 1) {
-                document.getElementById("nextText").innerHTML = "Correct";
+                resultsButton();
+                document.getElementById("nextText").textContent = "Riktig";
                 count++;
+                progressBar();
             } else {
-                document.getElementById("nextText").textContent = "Wrong";
+                resultsButton();
+                document.getElementById("nextText").textContent = "Feil";
                 count++;
+                failProgressBar();
             }
             break;
         case 2:
             if (correct === 2) {
-                document.getElementById("nextText").textContent = "Correct";
+                resultsButton();
+                document.getElementById("nextText").textContent = "Riktig";
                 count++;
+                progressBar();
             } else {
-                document.getElementById("nextText").textContent = "Wrong";
+                resultsButton();
+                document.getElementById("nextText").textContent = "Feil";
                 count++;
+                failProgressBar();
             }
             break;
         case 3:
             if (correct === 3) {
-                document.getElementById("nextText").textContent = "Correct";
-                console.log(question.correct_answer);
+                resultsButton();
+                document.getElementById("nextText").textContent = "Riktig";
+                count++;
+                progressBar();
             } else {
-                document.getElementById("nextText").textContent = "Wrong";
-                console.log(question.correct_answer);
+                resultsButton();
+                document.getElementById("nextText").textContent = "Feil";
+                count++;
+                failProgressBar();
             }
             break;
         default:
-
     }
-    progress += 10;
-    progressBar();
     blur();
+}
+
+function resultsButton() {
+    if (count === 9) {
+        document.getElementById("nextAnswers").textContent = "Resultater";
+    }
 }
 
 function blur() {
@@ -218,6 +238,14 @@ function blur() {
 }
 
 function nextAnswers() {
+    if (count === 10) {
+        final();
+    } else {
+        next();
+    }
+}
+
+function next() {
     var question = jsonData.questions[count];
     var image = question.images;
     var correct = question.correct_answer;
@@ -235,7 +263,17 @@ function nextAnswers() {
     document.getElementById("next").style.display = "none";
 }
 
+function final() {
+    document.getElementById("blur").style.display = "none";
+    document.getElementById("next").style.display = "none";
+    document.getElementById("final").style.display = "flex";
+}
+
 function progressBar() {
+    progress += 10;
+    if (progress >= 9) {
+        document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
+    }
     if (frames1 == 0) {
         frames1 = 1;
         var status = document.getElementById("status");
@@ -250,6 +288,31 @@ function progressBar() {
             } else {
                 width++;
                 status.style.width = width + "%";
+            }
+        }
+    }
+    statusText.innerHTML = width / 10 + 1 + " / 10";
+}
+
+function failProgressBar() {
+    redProgress += 10;
+    if (progress >= 9) {
+        document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
+    }
+    if (frames3 == 0) {
+        frames3 = 1;
+        var redStatus = document.getElementById("redStatus");
+        var statusText = document.getElementById("statusText");
+        var width = redProgress - 10;
+        var id = setInterval(frame, 10);
+
+        function frame() {
+            if (width >= redProgress) {
+                clearInterval(id);
+                frames3 = 0;
+            } else {
+                width++;
+                redStatus.style.width = width + "%";
             }
         }
     }
