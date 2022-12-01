@@ -156,6 +156,7 @@ function hint() {
     var hint = question.hint;
     console.log(hint)
     count++;
+    document.getElementById("hint").innerHTML = hint; 
 }
 
 
@@ -275,12 +276,15 @@ function next() {
     var answer2 = question.answers[1];
     var answer3 = question.answers[2];
     var answer4 = question.answers[3];
+    const visHint = 'Vis hint';
+    var hint = question.hint;
     count++;
     document.getElementById("answer1").innerHTML = answer1;
     document.getElementById("answer2").innerHTML = answer2;
     document.getElementById("answer3").innerHTML = answer3;
-    document.getElementById("answer4").innerHTML = answer4;
+    document.getElementById("answer4").innerHTML = answer4;   
     document.getElementById("image").src = image;
+    document.getElementById("hint").innerHTML = visHint;
     document.getElementById("blur").style.filter = "blur(0px)";
     document.getElementById("next").style.display = "none";
     document.getElementById("answers").style.display = "flex";
