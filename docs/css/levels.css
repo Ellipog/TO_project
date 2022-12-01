@@ -54,6 +54,12 @@ body {
     background-color: rgb(183, 183, 183);
 }
 
+#hint{
+    display: flex;
+    width: 50%;
+    height: 10%;
+}
+
 #status {
     width: 0%;
     height: 100%;
@@ -75,7 +81,7 @@ body {
 
 #answers {
     width: 95%;
-    height: 30%;
+    height: 35%;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;

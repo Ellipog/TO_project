@@ -149,6 +149,17 @@ var redProgress = 0;
 var cor = 0;
 var wrong = 0;
 
+
+function hint() {
+    count--;
+    var question = jsonData.questions[count];
+    var hint = question.hint;
+    console.log(hint)
+    count++;
+}
+
+
+
 nextAnswers();
 
 function answer(answer) {
