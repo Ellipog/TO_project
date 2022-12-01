@@ -9,129 +9,129 @@ const jsonData = {
     "questions": [{
             "number": 1,
             "question": "What is this?",
-            "images": "images/sink.png",
+            "images": "images/laptop.png",
             "answers": [
-                "Fork",
-                "Glass",
+                "Curling Iron",
                 "Blender",
-                "Sink"
+                "Remote control",
+                "Laptop"
             ],
             "correct_answer": 3,
-            "hint": "la det synke inn"
+            "hint": "ikke 'Blender' eller 'Curling iron'"
         },
         {
             "number": 2,
             "question": "What is this?",
-            "images": "images/knife.png",
+            "images": "images/radiator.png",
             "answers": [
-                "Bowl",
-                "Dishwasher",
-                "Knife",
-                "Pokemon"
+                "Ear phones",
+                "Radiator",
+                "Copier",
+                "Electric guitar"
             ],
             "correct_answer": 2,
-            "hint": "Ruter"
+            "hint": "en by i lynet mcqueen"
         },
         {
             "number": 3,
             "question": "What is this?",
-            "images": "images/mug.png",
+            "images": "images/ceilingfan.png",
             "answers": [
-                "A Mug",
-                "Boiler",
-                "Bread Knife",
-                "Spoon"
+                "Reading light",
+                "Ceiling fan",
+                "Printer",
+                "Computer mouse"
             ],
-            "correct_answer": 0,
-            "hint": "Comes in a casserole"
+            "correct_answer": 1,
+            "hint": "The ceiling"
         },
         {
             "number": 4,
             "question": "What is this??",
-            "images": "images/whisk.png",
+            "images": "images/digitalcamera.png",
             "answers": [
                 "Coffee maker",
-                "Waffle Iron",
-                "Whisk",
-                "Frying Pan"
+                "Hair dryer",
+                "Charger",
+                "Digital camera"
             ],
-            "correct_answer": 2,
-            "hint": "A type of salad"
+            "correct_answer": 3,
+            "hint": "A type of camera"
         },
         {
             "number": 5,
             "question": "What is this?",
-            "images": "images/freezer.png",
+            "images": "images/drone.png",
             "answers": [
-                "Toaster",
-                "Freezer",
-                "Can Opener",
-                "Measuring Jug"
+                "Drone",
+                "Speaker",
+                "USB drive",
+                "MODEM"
             ],
-            "correct_answer": 1,
+            "correct_answer": 0,
             "hint": "Comes from the sea"
         },
         {
             "number": 6,
             "question": "What is this?",
-            "images": "images/spatula.png",
+            "images": "images/router.png",
             "answers": [
-                "Spatula",
-                "Corkskrew",
-                "Oven Gloves",
-                "Aluminium foil"
+                "Smartwatch",
+                "Webcam",
+                "Router",
+                "Drill"
             ],
-            "correct_answer": 0,
+            "correct_answer": 2,
             "hint": "Dessert"
         },
         {
             "number": 7,
             "question": "What is this?",
-            "images": "images/vegetablepeeler.png",
+            "images": "images/headphones.png",
             "answers": [
-                "Fridge",
-                "Kitchen scales",
-                "Pizza Cutter",
-                "Vegetable peeler"
+                "Headphones",
+                "TV",
+                "Digital thermometer",
+                "Disco Light"
             ],
-            "correct_answer": 3,
+            "correct_answer": 0,
             "hint": "Dessert"
         },
         {
             "number": 8,
-            "question": "Hvilket kjøkken-redskap er dette?",
-            "images": "images/teaspoon.png",
+            "question": "What is this?",
+            "images": "images/gameconsole.png",
             "answers": [
                 "Microwave",
-                "Plastic wrap",
-                "Teaspoon",
-                "Kettle"
+                "Phone",
+                "Game console",
+                "Light bulbs"
             ],
             "correct_answer": 2,
             "hint": "Pasta and Meat"
         },
         {
             "number": 9,
-            "question": "Hvilket kjøkken-redskap er dette?",
-            "images": "images/strainer.png",
+            "question": "What is this?",
+            "images": "images/amplifier.png",
             "answers": [
-                "Casserole",
-                "Kitchen scissors",
-                "Strainer",
-                "Laddle"
+                "SD card",
+                "Amplifier",
+                "Tablet",
+                "Fan"
             ],
-            "correct_answer": 2,
+            "correct_answer": 1,
             "hint": "Sausage"
         },
         {
             "number": 10,
-            "question": "Hvilket kjøkken-redskap er dette?",
-            "images": "images/bottles.png",
+            "question": "What is this?",
+            "images": "images/vr.png",
             "answers": [
-                "Bottles",
-                "Thermos",
-                "Cutting board",
-                "Napkin"
+                "VR",
+                "Fridge",
+                "Monitor",
+                "Radio"
             ],
             "correct_answer": 0,
             "hint": "looks like a taco"
