@@ -11,22 +11,32 @@ body {
     align-items: center;
     background-color: #7B9FC0;
 }
-.leveltext{
-    justify-content: center;
+
+.leveltext {
+    display: flex;
+    align-items: center;
+    justify-content: left;
     font-size: 100%;
-    position: fixed;
-    margin-right: 50%;
+    width: 50%;
+    height: 100%;
+    margin-left: 3%;
 }
-.leveltheme{
-    justify-content: center;
+
+.leveltheme {
+    display: flex;
+    align-items: center;
+    justify-content: right;
     font-size: 100%;
-    position: fixed;
-    margin-left: 50%;
+    width: 50%;
+    height: 100%;
+    margin-right: 3%;
 }
-#welcome{
+
+#welcome {
     font-size: 300%;
     height: 5%;
 }
+
 #gamemenu {
     width: 100%;
     height: 85%;
@@ -35,13 +45,15 @@ body {
     display: flex;
     flex-direction: column;
 }
-.levels{
+
+.levels {
     width: 65%;
-    height: 10%;
+    height: 12%;
     display: flex;
     margin: 1%;
     background-color: #E4EBF5;
     justify-content: center;
     font-size: 250%;
     border-radius: 20px;
+    cursor: pointer;
 }
