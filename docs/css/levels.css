@@ -56,8 +56,11 @@ body {
 
 #hint{
     display: flex;
-    width: 50%;
-    height: 10%;
+    width: 12%;
+    height: 5%;
+    justify-content: center;
+    font-size: 200%;
+    border-radius: 10px;
 }
 
 #status {
