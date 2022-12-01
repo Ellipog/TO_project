@@ -146,6 +146,8 @@ var frames2 = 0;
 var frames3 = 0;
 var progress = 0;
 var redProgress = 0;
+var cor = 0;
+var wrong = 0;
 
 nextAnswers();
 
@@ -159,11 +161,13 @@ function answer(answer) {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Riktig";
                 count++;
+                cor++;
                 progressBar();
             } else {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Feil";
                 count++;
+                wrong++;
                 failProgressBar();
             }
             break;
@@ -172,11 +176,13 @@ function answer(answer) {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Riktig";
                 count++;
+                cor++;
                 progressBar();
             } else {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Feil";
                 count++;
+                wrong++;
                 failProgressBar();
             }
             break;
@@ -185,11 +191,13 @@ function answer(answer) {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Riktig";
                 count++;
+                cor++;
                 progressBar();
             } else {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Feil";
                 count++;
+                wrong++;
                 failProgressBar();
             }
             break;
@@ -198,11 +206,13 @@ function answer(answer) {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Riktig";
                 count++;
+                cor++;
                 progressBar();
             } else {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Feil";
                 count++;
+                wrong++;
                 failProgressBar();
             }
             break;
@@ -269,6 +279,9 @@ function final() {
     document.getElementById("blur").style.display = "none";
     document.getElementById("next").style.display = "none";
     document.getElementById("final").style.display = "flex";
+    document.getElementById("results").innerHTML =
+        "Du fikk \r\n" + "<span class='cor'>" + cor + "</span>" + " riktig svar\r\n" +
+        "<span class='wrong'>" + wrong + "</span>" + " feil svar";
 }
 
 function progressBar() {
