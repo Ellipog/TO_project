@@ -17,7 +17,7 @@ const jsonData = {
                 "Blueberry"
             ],
             "correct_answer": 0,
-            "hint": "Yellow"
+            "hint": " Nesten norsk"
         },
         {
             "number": 2,
@@ -134,7 +134,7 @@ const jsonData = {
                 "Burritos"
             ],
             "correct_answer": 3,
-            "hint": "looks like a taco"
+            "hint": "Looks like a taco"
         }
 
     ]
