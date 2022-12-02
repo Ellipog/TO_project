@@ -17,7 +17,7 @@ const jsonData = {
                 "Sink"
             ],
             "correct_answer": 3,
-            "hint": "rimer på flink"
+            "hint": "Rimer på flink"
         },
         {
             "number": 2,
@@ -82,7 +82,7 @@ const jsonData = {
                 "Aluminium foil"
             ],
             "correct_answer": 0,
-            "hint": "ikke Corkskrew"
+            "hint": "Ikke Corkskrew"
         },
         {
             "number": 7,
@@ -108,7 +108,7 @@ const jsonData = {
                 "Kettle"
             ],
             "correct_answer": 2,
-            "hint": "Pasta and Meat"
+            "hint": "Poo er i ordet"
         },
         {
             "number": 9,
@@ -121,7 +121,7 @@ const jsonData = {
                 "Laddle"
             ],
             "correct_answer": 2,
-            "hint": "Sausage"
+            "hint": "Rain er i ordet"
         },
         {
             "number": 10,
@@ -134,7 +134,7 @@ const jsonData = {
                 "Napkin"
             ],
             "correct_answer": 0,
-            "hint": "looks like a taco"
+            "hint": "Ikke Thermos"
         }
 
     ]
@@ -174,11 +174,13 @@ function answer(answer) {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Riktig";
                 count++;
+                cor++;
                 progressBar();
             } else {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Feil";
                 count++;
+                wrong++;
                 failProgressBar();
             }
             break;
@@ -187,11 +189,13 @@ function answer(answer) {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Riktig";
                 count++;
+                cor++;
                 progressBar();
             } else {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Feil";
                 count++;
+                wrong++;
                 failProgressBar();
             }
             break;
@@ -200,11 +204,13 @@ function answer(answer) {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Riktig";
                 count++;
+                cor++;
                 progressBar();
             } else {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Feil";
                 count++;
+                wrong++;
                 failProgressBar();
             }
             break;
@@ -213,11 +219,13 @@ function answer(answer) {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Riktig";
                 count++;
+                cor++;
                 progressBar();
             } else {
                 resultsButton();
                 document.getElementById("nextText").textContent = "Feil";
                 count++;
+                wrong++;
                 failProgressBar();
             }
             break;

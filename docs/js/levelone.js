@@ -30,7 +30,7 @@ const jsonData = {
                 "Nuggets"
             ],
             "correct_answer": 1,
-            "hint": "Heart shaped"
+            "hint": "Likner norske ordet"
         },
         {
             "number": 3,
@@ -43,7 +43,7 @@ const jsonData = {
                 "Mac'N Cheese"
             ],
             "correct_answer": 2,
-            "hint": "Comes in a casserole"
+            "hint": "Mindre enn 4 bokstaver"
         },
         {
             "number": 4,
@@ -56,7 +56,7 @@ const jsonData = {
                 "Yoghurt"
             ],
             "correct_answer": 2,
-            "hint": "A type of salad"
+            "hint": "En type salat"
         },
         {
             "number": 5,
@@ -69,7 +69,7 @@ const jsonData = {
                 "Salmon"
             ],
             "correct_answer": 3,
-            "hint": "Comes from the sea"
+            "hint": "Ikke bread"
         },
         {
             "number": 6,
@@ -82,7 +82,7 @@ const jsonData = {
                 "Chicken wings"
             ],
             "correct_answer": 2,
-            "hint": "Dessert"
+            "hint": "Ett ord"
         },
         {
             "number": 7,
@@ -95,7 +95,7 @@ const jsonData = {
                 "Cookies"
             ],
             "correct_answer": 3,
-            "hint": "Dessert"
+            "hint": "Ett ord"
         },
         {
             "number": 8,
@@ -108,7 +108,7 @@ const jsonData = {
                 "Pizza"
             ],
             "correct_answer": 0,
-            "hint": "Pasta and Meat"
+            "hint": "To ord"
         },
         {
             "number": 9,
@@ -121,7 +121,7 @@ const jsonData = {
                 "Turkey"
             ],
             "correct_answer": 1,
-            "hint": "Sausage"
+            "hint": "To ord"
         },
         {
             "number": 10,
@@ -134,7 +134,7 @@ const jsonData = {
                 "Burritos"
             ],
             "correct_answer": 3,
-            "hint": "Looks like a taco"
+            "hint": "Ikke spaghetti"
         }
 
     ]
