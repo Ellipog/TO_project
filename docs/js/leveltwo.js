@@ -17,7 +17,7 @@ const jsonData = {
                 "Sink"
             ],
             "correct_answer": 3,
-            "hint": "la det synke inn"
+            "hint": "rimer på flink"
         },
         {
             "number": 2,
@@ -30,7 +30,7 @@ const jsonData = {
                 "Pokemon"
             ],
             "correct_answer": 2,
-            "hint": "Ruter"
+            "hint": "K er i ordet"
         },
         {
             "number": 3,
@@ -43,7 +43,7 @@ const jsonData = {
                 "Spoon"
             ],
             "correct_answer": 0,
-            "hint": "Comes in a casserole"
+            "hint": "2 ord"
         },
         {
             "number": 4,
@@ -56,7 +56,7 @@ const jsonData = {
                 "Frying Pan"
             ],
             "correct_answer": 2,
-            "hint": "A type of salad"
+            "hint": "W er i ordet"
         },
         {
             "number": 5,
@@ -69,7 +69,7 @@ const jsonData = {
                 "Measuring Jug"
             ],
             "correct_answer": 1,
-            "hint": "Comes from the sea"
+            "hint": "Likner norske ordet"
         },
         {
             "number": 6,
@@ -82,7 +82,7 @@ const jsonData = {
                 "Aluminium foil"
             ],
             "correct_answer": 0,
-            "hint": "Dessert"
+            "hint": "ikke Corkskrew"
         },
         {
             "number": 7,
@@ -95,7 +95,7 @@ const jsonData = {
                 "Vegetable peeler"
             ],
             "correct_answer": 3,
-            "hint": "Dessert"
+            "hint": "2 ord"
         },
         {
             "number": 8,
@@ -146,6 +146,21 @@ var frames2 = 0;
 var frames3 = 0;
 var progress = 0;
 var redProgress = 0;
+var cor = 0;
+var wrong = 0;
+
+
+function hint() {
+    count--;
+    var question = jsonData.questions[count];
+    var hint = question.hint;
+    console.log(hint)
+    count++;
+    document.getElementById("hint").innerHTML = hint; 
+}
+
+
+
 
 nextAnswers();
 
@@ -253,12 +268,14 @@ function next() {
     var answer2 = question.answers[1];
     var answer3 = question.answers[2];
     var answer4 = question.answers[3];
+    const visHint = 'Vis hint';
     count++;
     document.getElementById("answer1").innerHTML = answer1;
     document.getElementById("answer2").innerHTML = answer2;
     document.getElementById("answer3").innerHTML = answer3;
     document.getElementById("answer4").innerHTML = answer4;
     document.getElementById("image").src = image;
+    document.getElementById("hint").innerHTML = visHint;
     document.getElementById("blur").style.filter = "blur(0px)";
     document.getElementById("next").style.display = "none";
 }
@@ -267,6 +284,9 @@ function final() {
     document.getElementById("blur").style.display = "none";
     document.getElementById("next").style.display = "none";
     document.getElementById("final").style.display = "flex";
+    document.getElementById("results").innerHTML =
+    "Du fikk \r\n" + "<span class='cor'>" + cor + "</span>" + " riktig svar\r\n" +
+    "<span class='wrong'>" + wrong + "</span>" + " feil svar";
 }
 
 function progressBar() {

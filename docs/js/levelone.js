@@ -17,7 +17,7 @@ const jsonData = {
                 "Blueberry"
             ],
             "correct_answer": 0,
-            "hint": " Nesten norsk"
+            "hint": "Likner norske ordet"
         },
         {
             "number": 2,
