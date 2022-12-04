@@ -8,7 +8,6 @@ const jsonData = {
     },
     "questions": [{
             "number": 1,
-            "question": "What food is this?",
             "images": "images/banana.png",
             "answers": [
                 "Banana",
@@ -21,7 +20,6 @@ const jsonData = {
         },
         {
             "number": 2,
-            "question": "What food is this?",
             "images": "images/waffle.png",
             "answers": [
                 "Pancake",
@@ -34,7 +32,6 @@ const jsonData = {
         },
         {
             "number": 3,
-            "question": "What food is this?",
             "images": "images/pie.png",
             "answers": [
                 "Taco",
@@ -47,7 +44,6 @@ const jsonData = {
         },
         {
             "number": 4,
-            "question": "What food is this?",
             "images": "images/ceasarsalad.png",
             "answers": [
                 "Corn Flakes",
@@ -60,7 +56,6 @@ const jsonData = {
         },
         {
             "number": 5,
-            "question": "What food is this?",
             "images": "images/salmon.png",
             "answers": [
                 "Tater Tots",
@@ -73,7 +68,6 @@ const jsonData = {
         },
         {
             "number": 6,
-            "question": "What food is this?",
             "images": "images/smores.png",
             "answers": [
                 "P&J Sandwich",
@@ -86,7 +80,6 @@ const jsonData = {
         },
         {
             "number": 7,
-            "question": "What food is this?",
             "images": "images/cookies.png",
             "answers": [
                 "Lasagne",
@@ -99,7 +92,6 @@ const jsonData = {
         },
         {
             "number": 8,
-            "question": "What food is this?",
             "images": "images/stroganof.png",
             "answers": [
                 "Beef Stroganof",
@@ -112,7 +104,6 @@ const jsonData = {
         },
         {
             "number": 9,
-            "question": "What food is this?",
             "images": "images/hotdogs.png",
             "answers": [
                 "Nachos",
@@ -125,7 +116,6 @@ const jsonData = {
         },
         {
             "number": 10,
-            "question": "What food is this?",
             "images": "images/burritos.png",
             "answers": [
                 "Spaghetti",

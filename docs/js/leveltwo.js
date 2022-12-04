@@ -1,14 +1,13 @@
 const jsonData = {
     "module": {
         "number": 1,
-        "name": "Level-one",
+        "name": "Level-two",
         "images": 10,
         "questions": 10,
         "revision": "HUH"
     },
     "questions": [{
             "number": 1,
-            "question": "What is this?",
             "images": "images/sink.png",
             "answers": [
                 "Fork",
@@ -21,7 +20,6 @@ const jsonData = {
         },
         {
             "number": 2,
-            "question": "What is this?",
             "images": "images/knife.png",
             "answers": [
                 "Bowl",
@@ -34,7 +32,6 @@ const jsonData = {
         },
         {
             "number": 3,
-            "question": "What is this?",
             "images": "images/mug.png",
             "answers": [
                 "A Mug",
@@ -47,7 +44,6 @@ const jsonData = {
         },
         {
             "number": 4,
-            "question": "What is this??",
             "images": "images/whisk.png",
             "answers": [
                 "Coffee maker",
@@ -60,7 +56,6 @@ const jsonData = {
         },
         {
             "number": 5,
-            "question": "What is this?",
             "images": "images/freezer.png",
             "answers": [
                 "Toaster",
@@ -73,7 +68,6 @@ const jsonData = {
         },
         {
             "number": 6,
-            "question": "What is this?",
             "images": "images/spatula.png",
             "answers": [
                 "Spatula",
@@ -86,7 +80,6 @@ const jsonData = {
         },
         {
             "number": 7,
-            "question": "What is this?",
             "images": "images/vegetablepeeler.png",
             "answers": [
                 "Fridge",
@@ -99,7 +92,6 @@ const jsonData = {
         },
         {
             "number": 8,
-            "question": "Hvilket kjøkken-redskap er dette?",
             "images": "images/teaspoon.png",
             "answers": [
                 "Microwave",
@@ -112,7 +104,6 @@ const jsonData = {
         },
         {
             "number": 9,
-            "question": "Hvilket kjøkken-redskap er dette?",
             "images": "images/strainer.png",
             "answers": [
                 "Casserole",
@@ -125,7 +116,6 @@ const jsonData = {
         },
         {
             "number": 10,
-            "question": "Hvilket kjøkken-redskap er dette?",
             "images": "images/bottles.png",
             "answers": [
                 "Bottles",
