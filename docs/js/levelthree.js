@@ -130,7 +130,10 @@ const jsonData = {
     ]
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 43dcd0d58875aa2dece769b184e5b34069ea17fc
 var count = 0;
 var frames1 = 0;
 var frames2 = 0;
@@ -147,7 +150,11 @@ function hint() {
     var hint = question.hint;
     console.log(hint)
     count++;
+<<<<<<< HEAD
+    document.getElementById("hint").innerHTML = hint;
+=======
     document.getElementById("hint").innerHTML = hint; 
+>>>>>>> 43dcd0d58875aa2dece769b184e5b34069ea17fc
 }
 
 
@@ -273,7 +280,11 @@ function next() {
     document.getElementById("answer1").innerHTML = answer1;
     document.getElementById("answer2").innerHTML = answer2;
     document.getElementById("answer3").innerHTML = answer3;
+<<<<<<< HEAD
+    document.getElementById("answer4").innerHTML = answer4;
+=======
     document.getElementById("answer4").innerHTML = answer4;   
+>>>>>>> 43dcd0d58875aa2dece769b184e5b34069ea17fc
     document.getElementById("image").src = image;
     document.getElementById("hint").innerHTML = visHint;
     document.getElementById("blur").style.filter = "blur(0px)";
