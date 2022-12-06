@@ -130,10 +130,6 @@ const jsonData = {
     ]
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 43dcd0d58875aa2dece769b184e5b34069ea17fc
 var count = 0;
 var frames1 = 0;
 var frames2 = 0;
@@ -150,11 +146,7 @@ function hint() {
     var hint = question.hint;
     console.log(hint)
     count++;
-<<<<<<< HEAD
     document.getElementById("hint").innerHTML = hint;
-=======
-    document.getElementById("hint").innerHTML = hint; 
->>>>>>> 43dcd0d58875aa2dece769b184e5b34069ea17fc
 }
 
 
