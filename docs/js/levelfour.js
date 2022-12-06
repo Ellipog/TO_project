@@ -1,145 +1,139 @@
 const jsonData = {
     "module": {
         "number": 1,
-        "name": "Level-one",
+        "name": "Level-four",
         "images": 10,
         "questions": 10,
         "revision": "HUH"
     },
     "questions": [{
             "number": 1,
-            "question": "What is this?",
-            "images": "images/sink.png",
+            "images": "images/caps.png",
             "answers": [
-                "Fork",
-                "Glass",
-                "Blender",
-                "Sink"
+                "Caps",
+                "Boxer shorts",
+                "Tie",
+                "Gloves"
             ],
-            "correct_answer": 3,
-            "hint": "la det synke inn"
+            "correct_answer": 0,
+            "hint": "Norsk-engelsk"
         },
         {
             "number": 2,
-            "question": "What is this?",
-            "images": "images/knife.png",
+            "images": "images/sneakers.png",
             "answers": [
-                "Bowl",
-                "Dishwasher",
-                "Knife",
-                "Pokemon"
+                "Mittons",
+                "Bowtie",
+                "Tights",
+                "Sneakers"
             ],
-            "correct_answer": 2,
-            "hint": "Ruter"
+            "correct_answer": 3,
+            "hint": "Flest bokstaver"
         },
         {
             "number": 3,
-            "question": "What is this?",
-            "images": "images/mug.png",
+            "images": "images/shirt.png",
             "answers": [
-                "A Mug",
-                "Boiler",
-                "Bread Knife",
-                "Spoon"
+                "Tank top",
+                "Shirt",
+                "Vest",
+                "Scarf"
             ],
-            "correct_answer": 0,
-            "hint": "Comes in a casserole"
+            "correct_answer": 1,
+            "hint": "5 bokstaver"
         },
         {
             "number": 4,
-            "question": "What is this??",
-            "images": "images/whisk.png",
+            "images": "images/socks.png",
             "answers": [
-                "Coffee maker",
-                "Waffle Iron",
-                "Whisk",
-                "Frying Pan"
+                "Socks",
+                "Belt",
+                "Swim suit",
+                "Suspenders"
             ],
-            "correct_answer": 2,
-            "hint": "A type of salad"
+            "correct_answer": 0,
+            "hint": "Likner norsk"
         },
         {
             "number": 5,
-            "question": "What is this?",
-            "images": "images/freezer.png",
+            "images": "images/pants.png",
             "answers": [
-                "Toaster",
-                "Freezer",
-                "Can Opener",
-                "Measuring Jug"
+                "Hat",
+                "Rain coat",
+                "Pants",
+                "Boots"
             ],
-            "correct_answer": 1,
-            "hint": "Comes from the sea"
+            "correct_answer": 2,
+            "hint": "Ikke Hat eller Boots"
         },
         {
             "number": 6,
-            "question": "What is this?",
-            "images": "images/spatula.png",
+            "images": "images/jacket.png",
             "answers": [
-                "Spatula",
-                "Corkskrew",
-                "Oven Gloves",
-                "Aluminium foil"
+                "Sunglasses",
+                "Hoodie",
+                "Sweatpants",
+                "Jacket"
             ],
-            "correct_answer": 0,
-            "hint": "Dessert"
+            "correct_answer": 3,
+            "hint": "C er i ordet"
         },
         {
             "number": 7,
-            "question": "What is this?",
-            "images": "images/vegetablepeeler.png",
+            "images": "images/sweater.png",
             "answers": [
-                "Fridge",
-                "Kitchen scales",
-                "Pizza Cutter",
-                "Vegetable peeler"
+                "Track suit",
+                "High heels",
+                "Sweater",
+                "Skirt"
             ],
-            "correct_answer": 3,
-            "hint": "Dessert"
+            "correct_answer": 2,
+            "hint": "Begynner på S"
         },
         {
             "number": 8,
-            "question": "Hvilket kjøkken-redskap er dette?",
-            "images": "images/teaspoon.png",
+            "images": "images/shorts.png",
             "answers": [
-                "Microwave",
-                "Plastic wrap",
-                "Teaspoon",
-                "Kettle"
+                "Suit",
+                "Shorts",
+                "Polo Shirt",
+                "Singlet"
             ],
-            "correct_answer": 2,
-            "hint": "Pasta and Meat"
+            "correct_answer": 1,
+            "hint": "Norsk-engelsk"
         },
         {
             "number": 9,
-            "question": "Hvilket kjøkken-redskap er dette?",
-            "images": "images/strainer.png",
+            "images": "images/Blazer.png",
             "answers": [
-                "Casserole",
-                "Kitchen scissors",
-                "Strainer",
-                "Laddle"
+                "Sneakers",
+                "Blazer",
+                "Jeans",
+                "Flip flops"
             ],
             "correct_answer": 2,
-            "hint": "Sausage"
+            "hint": "Et ord"
         },
         {
             "number": 10,
-            "question": "Hvilket kjøkken-redskap er dette?",
-            "images": "images/bottles.png",
+            "images": "images/dress.png",
             "answers": [
-                "Bottles",
-                "Thermos",
-                "Cutting board",
-                "Napkin"
+                "Gym clothes",
+                "Blouse",
+                "Pajamas",
+                "Dress"
             ],
-            "correct_answer": 0,
-            "hint": "looks like a taco"
+            "correct_answer": 3,
+            "hint": "Også et norsk ord"
         }
 
     ]
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 43dcd0d58875aa2dece769b184e5b34069ea17fc
 var count = 0;
 var frames1 = 0;
 var frames2 = 0;
@@ -156,7 +150,11 @@ function hint() {
     var hint = question.hint;
     console.log(hint)
     count++;
+<<<<<<< HEAD
     document.getElementById("hint").innerHTML = hint;
+=======
+    document.getElementById("hint").innerHTML = hint; 
+>>>>>>> 43dcd0d58875aa2dece769b184e5b34069ea17fc
 }
 
 
@@ -282,7 +280,11 @@ function next() {
     document.getElementById("answer1").innerHTML = answer1;
     document.getElementById("answer2").innerHTML = answer2;
     document.getElementById("answer3").innerHTML = answer3;
+<<<<<<< HEAD
     document.getElementById("answer4").innerHTML = answer4;
+=======
+    document.getElementById("answer4").innerHTML = answer4;   
+>>>>>>> 43dcd0d58875aa2dece769b184e5b34069ea17fc
     document.getElementById("image").src = image;
     document.getElementById("hint").innerHTML = visHint;
     document.getElementById("blur").style.filter = "blur(0px)";

@@ -1,14 +1,13 @@
 const jsonData = {
     "module": {
         "number": 1,
-        "name": "Level-one",
+        "name": "Level-three",
         "images": 10,
         "questions": 10,
         "revision": "HUH"
     },
     "questions": [{
             "number": 1,
-            "question": "What is this?",
             "images": "images/laptop.png",
             "answers": [
                 "Curling Iron",
@@ -21,7 +20,6 @@ const jsonData = {
         },
         {
             "number": 2,
-            "question": "What is this?",
             "images": "images/radiator.png",
             "answers": [
                 "Ear phones",
@@ -29,12 +27,11 @@ const jsonData = {
                 "Copier",
                 "Electric guitar"
             ],
-            "correct_answer": 2,
-            "hint": "en by i lynet mcqueen"
+            "correct_answer": 1,
+            "hint": "Et ord"
         },
         {
             "number": 3,
-            "question": "What is this?",
             "images": "images/ceilingfan.png",
             "answers": [
                 "Reading light",
@@ -43,11 +40,10 @@ const jsonData = {
                 "Computer mouse"
             ],
             "correct_answer": 1,
-            "hint": "The ceiling"
+            "hint": "2 ord"
         },
         {
             "number": 4,
-            "question": "What is this??",
             "images": "images/digitalcamera.png",
             "answers": [
                 "Coffee maker",
@@ -56,11 +52,10 @@ const jsonData = {
                 "Digital camera"
             ],
             "correct_answer": 3,
-            "hint": "A type of camera"
+            "hint": "Nesten norsk"
         },
         {
             "number": 5,
-            "question": "What is this?",
             "images": "images/drone.png",
             "answers": [
                 "Drone",
@@ -69,11 +64,10 @@ const jsonData = {
                 "MODEM"
             ],
             "correct_answer": 0,
-            "hint": "Comes from the sea"
+            "hint": "Likt som norsk"
         },
         {
             "number": 6,
-            "question": "What is this?",
             "images": "images/router.png",
             "answers": [
                 "Smartwatch",
@@ -82,11 +76,10 @@ const jsonData = {
                 "Drill"
             ],
             "correct_answer": 2,
-            "hint": "Dessert"
+            "hint": "6 bokstaver"
         },
         {
             "number": 7,
-            "question": "What is this?",
             "images": "images/headphones.png",
             "answers": [
                 "Headphones",
@@ -95,11 +88,10 @@ const jsonData = {
                 "Disco Light"
             ],
             "correct_answer": 0,
-            "hint": "Dessert"
+            "hint": "Et ord"
         },
         {
             "number": 8,
-            "question": "What is this?",
             "images": "images/gameconsole.png",
             "answers": [
                 "Microwave",
@@ -108,11 +100,10 @@ const jsonData = {
                 "Light bulbs"
             ],
             "correct_answer": 2,
-            "hint": "Pasta and Meat"
+            "hint": "2 ord"
         },
         {
             "number": 9,
-            "question": "What is this?",
             "images": "images/amplifier.png",
             "answers": [
                 "SD card",
@@ -121,11 +112,10 @@ const jsonData = {
                 "Fan"
             ],
             "correct_answer": 1,
-            "hint": "Sausage"
+            "hint": "Mest bokstaver"
         },
         {
             "number": 10,
-            "question": "What is this?",
             "images": "images/vr.png",
             "answers": [
                 "VR",
@@ -134,12 +124,16 @@ const jsonData = {
                 "Radio"
             ],
             "correct_answer": 0,
-            "hint": "looks like a taco"
+            "hint": "En forkortelse"
         }
 
     ]
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 43dcd0d58875aa2dece769b184e5b34069ea17fc
 var count = 0;
 var frames1 = 0;
 var frames2 = 0;
@@ -156,7 +150,11 @@ function hint() {
     var hint = question.hint;
     console.log(hint)
     count++;
+<<<<<<< HEAD
     document.getElementById("hint").innerHTML = hint;
+=======
+    document.getElementById("hint").innerHTML = hint; 
+>>>>>>> 43dcd0d58875aa2dece769b184e5b34069ea17fc
 }
 
 
@@ -282,7 +280,11 @@ function next() {
     document.getElementById("answer1").innerHTML = answer1;
     document.getElementById("answer2").innerHTML = answer2;
     document.getElementById("answer3").innerHTML = answer3;
+<<<<<<< HEAD
     document.getElementById("answer4").innerHTML = answer4;
+=======
+    document.getElementById("answer4").innerHTML = answer4;   
+>>>>>>> 43dcd0d58875aa2dece769b184e5b34069ea17fc
     document.getElementById("image").src = image;
     document.getElementById("hint").innerHTML = visHint;
     document.getElementById("blur").style.filter = "blur(0px)";
