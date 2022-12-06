@@ -104,7 +104,7 @@ const jsonData = {
         },
         {
             "number": 9,
-            "images": "images/Blazer.png",
+            "images": "images/jeans.png",
             "answers": [
                 "Sneakers",
                 "Blazer",
@@ -116,14 +116,14 @@ const jsonData = {
         },
         {
             "number": 10,
-            "images": "images/dress.png",
+            "images": "images/pajamas.png",
             "answers": [
                 "Gym clothes",
                 "Blouse",
                 "Pajamas",
                 "Dress"
             ],
-            "correct_answer": 3,
+            "correct_answer": 2,
             "hint": "Også et norsk ord"
         }
 
@@ -272,11 +272,7 @@ function next() {
     document.getElementById("answer1").innerHTML = answer1;
     document.getElementById("answer2").innerHTML = answer2;
     document.getElementById("answer3").innerHTML = answer3;
-<<<<<<< HEAD
     document.getElementById("answer4").innerHTML = answer4;
-=======
-    document.getElementById("answer4").innerHTML = answer4;   
->>>>>>> 43dcd0d58875aa2dece769b184e5b34069ea17fc
     document.getElementById("image").src = image;
     document.getElementById("hint").innerHTML = visHint;
     document.getElementById("blur").style.filter = "blur(0px)";
