@@ -8,93 +8,123 @@ const jsonData = {
     },
     "questions": [{
             "number": 1,
-            "question": "What is this?",
-            "images": "images/sink.png",
-            "answers": [
-                "sink"
-            ],
-            "hint": "la det synke inn"
+            "images": "images/banana.png",
+            "answers": "banana",
+            "hint": "Likner norske ordet"
         },
         {
             "number": 2,
-            "question": "What is this?",
-            "images": "images/knife.png",
-            "answers": [
-                "knife",
-            ],
-            "hint": "Ruter"
+            "images": "images/pie.png",
+            "answers": "pie",
+            "hint": "Mindre enn 4 bokstaver"
         },
         {
             "number": 3,
-            "question": "What is this?",
-            "images": "images/mug.png",
-            "answers": [
-                "mug",
-            ],
-            "hint": "Comes in a casserole"
+            "images": "images/salmon.png",
+            "answers": "salmon",
+            "hint": "Ikke bread"
         },
         {
             "number": 4,
-            "question": "What is this??",
-            "images": "images/whisk.png",
-            "answers": [
-                "whisk",
-            ],
-            "hint": "A type of salad"
+            "images": "images/cookies.png",
+            "answers": "Ccookies",
+            "hint": "Ett ord"
         },
         {
             "number": 5,
-            "question": "What is this?",
-            "images": "images/freezer.png",
-            "answers": [
-                "freezer",
-            ],
-            "hint": "Comes from the sea"
+            "images": "images/hotdogs.png",
+            "answers": "hot dogs",
+            "hint": "To ord"
         },
         {
             "number": 6,
-            "question": "What is this?",
-            "images": "images/spatula.png",
-            "answers": [
-                "spatula",
-            ],
-            "hint": "Dessert"
+            "images": "images/sink.png",
+            "answers": "sink",
+            "hint": "Rimer på flink"
         },
         {
             "number": 7,
-            "question": "What is this?",
-            "images": "images/vegetablepeeler.png",
-            "answers": [
-                "peeler"
-            ],
-            "hint": "Dessert"
+            "images": "images/mug.png",
+            "answers":"a mug",
+            "hint": "2 ord"
         },
         {
             "number": 8,
-            "question": "Hvilket kjøkken-redskap er dette?",
-            "images": "images/teaspoon.png",
-            "answers": [
-                "teaspoon",
-            ],
-            "hint": "Pasta and Meat"
+            "images": "images/freezer.png",
+            "answers": "freezer",
+            "hint": "Likner norske ordet"
         },
         {
             "number": 9,
-            "question": "Hvilket kjøkken-redskap er dette?",
-            "images": "images/strainer.png",
-            "answers": [
-                "strainer",
-            ],
-            "hint": "Sausage"
+            "images": "images/vegetablepeeler.png",
+            "answers": "vegetable peeler",
+            "hint": "2 ord"
         },
         {
             "number": 10,
-            "question": "Hvilket kjøkken-redskap er dette?",
-            "images": "images/bottles.png",
-            "answers": [
-                "bottles",
-            ],
-            "hint": "looks like a taco"
+            "images": "images/strainer.png",
+            "answers":"strainer",
+            "hint": "Rain er i ordet"
+        },
+        {
+            "number": 11,
+            "images": "images/laptop.png",
+            "answers": "laptop",
+            "hint": "ikke 'Blender' eller 'Curling iron'"
+        },
+        {
+            "number": 12,
+            "images": "images/ceilingfan.png",
+            "answers": "ceiling fan",
+            "hint": "2 ord"
+        },
+        {
+            "number": 13,
+            "images": "images/drone.png",
+            "answers": "drone",
+            "hint": "Likt som norsk"
+        },
+        {
+            "number": 14,
+            "images": "images/headphones.png",
+            "answers": "headphones",
+            "hint": "Et ord"
+        },
+        {
+            "number": 15,
+            "images": "images/amplifier.png",
+            "answers": "amplifier",
+            "hint": "Mest bokstaver"
+        },
+        {
+            "number": 16,
+            "images": "images/caps.png",
+            "answers": "caps",
+            "hint": "Norsk-engelsk"
+        },
+        {
+            "number": 17,
+            "images": "images/shirt.png",
+            "answers": "shirt",
+            "hint": "5 bokstaver"
+        },
+        {
+            "number": 18,
+            "images": "images/pants.png",
+            "answers": "pants",
+            "hint": "Ikke Hat eller Boots"
+        },
+        {
+            "number": 19,
+            "images": "images/sweater.png",
+            "answers": "sweater",
+            "hint": "Begynner på S"
+        },
+        {
+            "number": 20,
+            "images": "images/jeans.png",
+            "answers": "jeans",
+            "hint": "Et ord"
         }
 
     ]
@@ -120,6 +150,8 @@ function hint() {
 
 nextAnswers();
 
+
+
 function answer() {
     count--;
     var question = jsonData.questions[count];
@@ -143,7 +175,7 @@ function answer() {
 }
 
 function resultsButton() {
-    if (count === 9) {
+    if (count === 19) {
         document.getElementById("nextAnswers").textContent = "Resultater";
     }
 }
@@ -170,7 +202,7 @@ function blur() {
 }
 
 function nextAnswers() {
-    if (count === 10) {
+    if (count === 20) {
         final();
     } else {
         next();
@@ -180,7 +212,7 @@ function nextAnswers() {
 function next() {
     var question = jsonData.questions[count];
     var image = question.images;
-    var correct = question.correct_answer;
+    var correct = question.answers;
     const visHint = 'Vis hint';
     var hint = question.hint;
     count++;
@@ -201,7 +233,7 @@ function final() {
 }
 
 function progressBar() {
-    progress += 10;
+    progress += 5;
     if (progress >= 9) {
         document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
     }
@@ -222,11 +254,11 @@ function progressBar() {
             }
         }
     }
-    statusText.innerHTML = (progress + redProgress) / 10 + " / 10";
+    statusText.innerHTML = (progress + redProgress) / 5 + " / 20";
 }
 
 function failProgressBar() {
-    redProgress += 10;
+    redProgress += 5;
     if (progress >= 9) {
         document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
     }
@@ -247,5 +279,5 @@ function failProgressBar() {
             }
         }
     }
-    statusText.innerHTML = (progress + redProgress) / 10 + " / 10";
+    statusText.innerHTML = (progress + redProgress) / 5 + " / 20";
 }
