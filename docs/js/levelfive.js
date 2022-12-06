@@ -65,7 +65,7 @@ const jsonData = {
             "question": "What is this?",
             "images": "images/vegetablepeeler.png",
             "answers": [
-                "vegetable peeler"
+                "peeler"
             ],
             "hint": "Dessert"
         },
@@ -123,13 +123,23 @@ nextAnswers();
 function answer() {
     count--;
     var question = jsonData.questions[count];
-    var correct = question.correct_answer;
+    var correct = question.answers;
     let submit = document.getElementById("answerInput").value;
     let submitted = submit.toLowerCase();
+    if (submitted == correct) {
+        document.getElementById("nextText").textContent = "Riktig";
+        cor++;
+        progressBar();
+    } else {
+        document.getElementById("nextText").textContent = "Feil";
+        wrong++;
+        failProgressBar();
+    }
     resultsButton();
     blur();
     count++;
     console.log(submitted);
+    document.getElementById("answerInput").value = "";
 }
 
 function resultsButton() {
