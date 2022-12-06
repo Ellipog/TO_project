@@ -100,7 +100,7 @@ const jsonData = {
                 "Pizza"
             ],
             "correct_answer": 0,
-            "hint": "To ord"
+            "hint": "Mer enn et ord"
         },
         {
             "number": 9,
