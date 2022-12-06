@@ -164,10 +164,12 @@ function answer() {
     count--;
     var question = jsonData.questions[count];
     var correct = question.correct_answer;
-    var submitted = document.getElementById("answerInput").value;
+    let submit = document.getElementById("answerInput").value;
+    let submitted = submit.toLowerCase();
     resultsButton();
     blur();
     count++;
+    console.log(submitted);
 }
 
 function resultsButton() {
