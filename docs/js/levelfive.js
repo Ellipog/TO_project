@@ -149,7 +149,6 @@ var redProgress = 0;
 var cor = 0;
 var wrong = 0;
 
-
 function hint() {
     count--;
     var question = jsonData.questions[count];
@@ -159,78 +158,16 @@ function hint() {
     document.getElementById("hint").innerHTML = hint;
 }
 
-
-
 nextAnswers();
 
-function answer(answer) {
+function answer() {
     count--;
     var question = jsonData.questions[count];
     var correct = question.correct_answer;
-    switch (answer) {
-        case 0:
-            if (correct === 0) {
-                resultsButton();
-                document.getElementById("nextText").textContent = "Riktig";
-                count++;
-                cor++;
-                progressBar();
-            } else {
-                resultsButton();
-                document.getElementById("nextText").textContent = "Feil";
-                count++;
-                wrong++;
-                failProgressBar();
-            }
-            break;
-        case 1:
-            if (correct === 1) {
-                resultsButton();
-                document.getElementById("nextText").textContent = "Riktig";
-                count++;
-                cor++;
-                progressBar();
-            } else {
-                resultsButton();
-                document.getElementById("nextText").textContent = "Feil";
-                count++;
-                wrong++;
-                failProgressBar();
-            }
-            break;
-        case 2:
-            if (correct === 2) {
-                resultsButton();
-                document.getElementById("nextText").textContent = "Riktig";
-                count++;
-                cor++;
-                progressBar();
-            } else {
-                resultsButton();
-                document.getElementById("nextText").textContent = "Feil";
-                count++;
-                wrong++;
-                failProgressBar();
-            }
-            break;
-        case 3:
-            if (correct === 3) {
-                resultsButton();
-                document.getElementById("nextText").textContent = "Riktig";
-                count++;
-                cor++;
-                progressBar();
-            } else {
-                resultsButton();
-                document.getElementById("nextText").textContent = "Feil";
-                count++;
-                wrong++;
-                failProgressBar();
-            }
-            break;
-        default:
-    }
+    var submitted = document.getElementById("answerInput").value;
+    resultsButton();
     blur();
+    count++;
 }
 
 function resultsButton() {
@@ -257,7 +194,7 @@ function blur() {
         }
     }
     document.getElementById("next").style.display = "flex";
-    document.getElementById("answers").style.display = "none";
+    document.getElementById("answers2").style.display = "none";
 }
 
 function nextAnswers() {
@@ -272,22 +209,14 @@ function next() {
     var question = jsonData.questions[count];
     var image = question.images;
     var correct = question.correct_answer;
-    var answer1 = question.answers[0];
-    var answer2 = question.answers[1];
-    var answer3 = question.answers[2];
-    var answer4 = question.answers[3];
     const visHint = 'Vis hint';
     var hint = question.hint;
     count++;
-    document.getElementById("answer1").innerHTML = answer1;
-    document.getElementById("answer2").innerHTML = answer2;
-    document.getElementById("answer3").innerHTML = answer3;
-    document.getElementById("answer4").innerHTML = answer4;
     document.getElementById("image").src = image;
     document.getElementById("hint").innerHTML = visHint;
     document.getElementById("blur").style.filter = "blur(0px)";
     document.getElementById("next").style.display = "none";
-    document.getElementById("answers").style.display = "flex";
+    document.getElementById("answers2").style.display = "flex";
 }
 
 function final() {
