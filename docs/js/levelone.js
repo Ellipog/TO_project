@@ -107,12 +107,12 @@ const jsonData = {
             "images": "images/hotdogs.png",
             "answers": [
                 "Nachos",
-                "Hot Dogs",
+                "Hotdogs",
                 "Cheese Burger",
                 "Turkey"
             ],
             "correct_answer": 1,
-            "hint": "To ord"
+            "hint": "Et ord"
         },
         {
             "number": 10,

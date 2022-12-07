@@ -33,8 +33,8 @@ const jsonData = {
         {
             "number": 5,
             "images": "images/hotdogs.png",
-            "answers": "hot dogs",
-            "hint": "To ord"
+            "answers": "hotdogs",
+            "hint": "Et ord"
         },
         {
             "number": 6,
