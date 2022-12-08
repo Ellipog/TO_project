@@ -1,8 +1,6 @@
 const jsonData = {
     "module": {
-        "number": 1,
         "name": "Level-four",
-        "images": 10,
         "questions": 10,
         "revision": "HUH"
     },
