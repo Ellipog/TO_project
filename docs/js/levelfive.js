@@ -180,6 +180,15 @@ autoType.addEventListener("keyup", function(event) {
     }
 });
 
+const nextAnswerEnter = document.getElementById("nextAnswers");
+
+nextAnswerEnter.addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    nextAnswers();
+  }
+});
+
+
 function resultsButton() {
     if (count === 19) {
         document.getElementById("nextAnswers").textContent = "Resultater";
