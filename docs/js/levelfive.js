@@ -20,19 +20,19 @@ const jsonData = {
             "number": 3,
             "images": "images/salmon.png",
             "answers": "salmon",
-            "hint": "Ikke bread"
+            "hint": "Begynner på sal"
         },
         {
             "number": 4,
             "images": "images/cookies.png",
-            "answers": "Ccookies",
+            "answers": "Cookies",
             "hint": "Ett ord"
         },
         {
             "number": 5,
             "images": "images/hotdogs.png",
             "answers": "hotdogs",
-            "hint": "Et ord"
+            "hint": "Begynner på coo"
         },
         {
             "number": 6,
@@ -44,7 +44,7 @@ const jsonData = {
             "number": 7,
             "images": "images/mug.png",
             "answers": "a mug",
-            "hint": "2 ord"
+            "hint": "2 ord, 4 bokstaver"
         },
         {
             "number": 8,
@@ -56,7 +56,7 @@ const jsonData = {
             "number": 9,
             "images": "images/vegetablepeeler.png",
             "answers": "vegetable peeler",
-            "hint": "2 ord"
+            "hint": "Første ord er vegetable"
         },
         {
             "number": 10,
@@ -68,13 +68,13 @@ const jsonData = {
             "number": 11,
             "images": "images/laptop.png",
             "answers": "laptop",
-            "hint": "ikke 'Blender' eller 'Curling iron'"
+            "hint": "Begynner på lap'"
         },
         {
             "number": 12,
             "images": "images/ceilingfan.png",
             "answers": "ceiling fan",
-            "hint": "2 ord"
+            "hint": "Tak vifte på norsk"
         },
         {
             "number": 13,
@@ -86,13 +86,13 @@ const jsonData = {
             "number": 14,
             "images": "images/headphones.png",
             "answers": "headphones",
-            "hint": "Et ord"
+            "hint": "Hodetelefoner oversatt"
         },
         {
             "number": 15,
             "images": "images/amplifier.png",
             "answers": "amplifier",
-            "hint": "Mest bokstaver"
+            "hint": "Begynner på amp"
         },
         {
             "number": 16,
@@ -110,19 +110,19 @@ const jsonData = {
             "number": 18,
             "images": "images/pants.png",
             "answers": "pants",
-            "hint": "Ikke Hat eller Boots"
+            "hint": "Begynner på pan"
         },
         {
             "number": 19,
             "images": "images/sweater.png",
             "answers": "sweater",
-            "hint": "Begynner på S"
+            "hint": "Rimer på weather"
         },
         {
             "number": 20,
             "images": "images/jeans.png",
             "answers": "jeans",
-            "hint": "Et ord"
+            "hint": "Rimer på beans"
         }
 
     ]
@@ -149,7 +149,6 @@ function hint() {
 nextAnswers();
 
 
-
 function answer() {
     count--;
     var question = jsonData.questions[count];
@@ -172,37 +171,24 @@ function answer() {
     document.getElementById("answerInput").value = "";
 }
 
+// Get the answer input and nextAnswers button
 const autoType = document.getElementById("answerInput");
+const nextAnswerButton = document.getElementById("next");
 
-autoType.addEventListener("keyup", function(event) {
-    if (event.key === "Enter") {
-        answer();
+// Attach a single event listener to the document
+document.addEventListener("keyup", function(event) {
+  // Check if the Enter key was pressed
+  if (event.key === "Enter") {
+    // If the answer input has focus, call the answer function
+    if (autoType === document.activeElement) {
+      answer();
     }
-});
-
-
-// hent input feltet
-const nextAnswerEnter = document.getElementById("nextAnswers");
-// event listener til input felt som henter  "keyup" event
-nextAnswerEnter.addEventListener("keyup", function(event) {
-      // keyup event sjekker om enter knappen var trykket på
-  if (event.key ==="Enter") {
-        // hente fnunksjonen som går til neste
-    answer();
+    // If the nextAnswers button has focus, call the nextAnswers function
+    else if (nextAnswerButton === document.activeElement) {
+        nextAnswers();
+    }
   }
 });
-
-function nextWithEnter() {
-    var input = document.getElementById("answerInput").value;
-  
-    // Check if the input field is empty
-    if (input === "") {
-      // Show an error message if the input field is empty
-      alert("Please fill in the input field before moving on to the next question.");
-      return;
-    }
-}
-
 
 
 function resultsButton() {
@@ -316,3 +302,4 @@ function failProgressBar() {
     }
     statusText.innerHTML = (progress + redProgress) / 5 + " / 20";
 }
+  
