@@ -144,7 +144,7 @@ function hint() {
     var hint = question.hint;
     console.log(hint)
     count++;
-    document.getElementById("hint").innerHTML = hint; 
+    document.getElementById("hint").innerHTML = hint;
 }
 
 
@@ -281,8 +281,8 @@ function final() {
     document.getElementById("next").style.display = "none";
     document.getElementById("final").style.display = "flex";
     document.getElementById("results").innerHTML =
-    "Du fikk \r\n" + "<span class='cor'>" + cor + "</span>" + " riktig svar\r\n" +
-    "<span class='wrong'>" + wrong + "</span>" + " feil svar";
+        "Du fikk \r\n" + "<span class='cor'>" + cor + "</span>" + " riktig svar\r\n" +
+        "<span class='wrong'>" + wrong + "</span>" + " feil svar";
 }
 
 function progressBar() {
@@ -313,6 +313,8 @@ function progressBar() {
 function failProgressBar() {
     redProgress += 10;
     if (progress >= 9) {
+        document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
+    } else if (progress >= 1) {
         document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
     }
     if (frames3 == 0) {
