@@ -43,7 +43,7 @@ const jsonData = {
         {
             "number": 7,
             "images": "images/mug.png",
-            "answers":"a mug",
+            "answers": "a mug",
             "hint": "2 ord"
         },
         {
@@ -61,7 +61,7 @@ const jsonData = {
         {
             "number": 10,
             "images": "images/strainer.png",
-            "answers":"strainer",
+            "answers": "strainer",
             "hint": "Rain er i ordet"
         },
         {
@@ -175,9 +175,9 @@ function answer() {
 const autoType = document.getElementById("answerInput");
 
 autoType.addEventListener("keyup", function(event) {
-  if (event.key === "Enter") {
-    answer();
-  }
+    if (event.key === "Enter") {
+        answer();
+    }
 });
 
 function resultsButton() {
@@ -267,6 +267,8 @@ function progressBar() {
 function failProgressBar() {
     redProgress += 5;
     if (progress >= 9) {
+        document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
+    } else if (progress >= 1) {
         document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
     }
     if (frames3 == 0) {

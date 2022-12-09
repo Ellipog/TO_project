@@ -316,6 +316,8 @@ function failProgressBar() {
     redProgress += 10;
     if (progress >= 9) {
         document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
+    } else if (progress >= 1) {
+        document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
     }
     if (frames3 == 0) {
         frames3 = 1;
