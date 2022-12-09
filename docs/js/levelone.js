@@ -1,5 +1,5 @@
 const jsonData = {
-     // JSON data object containing information about the quiz module and questions
+    // JSON data object containing information about the quiz module and questions
     "module": {
         "name": "Level-one",
         "questions": 10,
@@ -145,7 +145,7 @@ function hint() {
     var hint = question.hint;
     console.log(hint)
     count++;
-    document.getElementById("hint").innerHTML = hint; 
+    document.getElementById("hint").innerHTML = hint;
 }
 
 
@@ -271,7 +271,7 @@ function next() {
     document.getElementById("answer1").innerHTML = answer1;
     document.getElementById("answer2").innerHTML = answer2;
     document.getElementById("answer3").innerHTML = answer3;
-    document.getElementById("answer4").innerHTML = answer4;   
+    document.getElementById("answer4").innerHTML = answer4;
     document.getElementById("image").src = image;
     document.getElementById("hint").innerHTML = visHint;
     document.getElementById("blur").style.filter = "blur(0px)";
@@ -316,6 +316,8 @@ function progressBar() {
 function failProgressBar() {
     redProgress += 10;
     if (progress >= 9) {
+        document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
+    } else if (progress >= 1) {
         document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
     }
     if (frames3 == 0) {
