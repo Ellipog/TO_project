@@ -186,11 +186,12 @@ const nextAnswerEnter = document.getElementById("nextAnswers");
 // event listener til input felt som henter  "keyup" event
 nextAnswerEnter.addEventListener("keyup", function(event) {
       // keyup event sjekker om enter knappen var trykket på
-  if (event.key === "Enter") {
+  if (event.key ==="Enter") {
         // hente fnunksjonen som går til neste
-    nextAnswers();
+    answer();
   }
 });
+
 function nextWithEnter() {
     var input = document.getElementById("answerInput").value;
   
