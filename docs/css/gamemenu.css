@@ -9,7 +9,9 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: #7B9FC0;
+    background-color: #E4EBF5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #717e9c;
 }
 
 .leveltext {
@@ -49,17 +51,29 @@ body {
 }
 
 .levels {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #E4EBF5;
+    display: flex;
     width: 65%;
     height: 12%;
-    display: flex;
     margin: 1%;
-    background-color: #E4EBF5;
     justify-content: center;
-    font-size: 250%;
-    border-radius: 20px;
+    border-radius: 10px;
+    font-size: 200%;
+    border: 0px;
+    box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
+    transition: .1s ease-in-out;
+    color: #717e9c;
     cursor: pointer;
 }
 
+.levels:hover {
+    box-shadow: inset .3rem .3rem .6rem #c8d0e7, inset -.2rem -.2rem .5rem #FFFFFF;
+}
+
+.levels:active {
+    box-shadow: inset .6rem .6rem .6rem #c8d0e7, inset -.5rem -.5rem .5rem #FFFFFF;
+}
 
 @media only screen and (max-width: 600px) {
     html,
@@ -73,9 +87,10 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        background-color: #7B9FC0;
+        background-color: #E4EBF5;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #717e9c;
     }
-    
     .leveltext {
         display: flex;
         align-items: center;
@@ -86,7 +101,6 @@ body {
         margin-left: 3%;
         word-break: break-all;
     }
-    
     .leveltheme {
         display: flex;
         align-items: center;
@@ -97,12 +111,10 @@ body {
         margin-right: 3%;
         word-break: break-all;
     }
-    
     #welcome {
         font-size: 300%;
         height: 5%;
     }
-    
     #gamemenu {
         width: 100%;
         height: 85%;
@@ -111,16 +123,26 @@ body {
         display: flex;
         flex-direction: column;
     }
-    
     .levels {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #E4EBF5;
+        display: flex;
         width: 75%;
         height: 12%;
-        display: flex;
-        margin: 1%;
-        background-color: #E4EBF5;
+        margin: 5%;
         justify-content: center;
-        border-radius: 20px;
+        border-radius: 10px;
+        font-size: 200%;
+        border: 0px;
+        box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
+        transition: .1s ease-in-out;
+        color: #717e9c;
         cursor: pointer;
-        font-size: 190%;
     }
-  }
+    .levels:hover {
+        box-shadow: inset .3rem .3rem .6rem #c8d0e7, inset -.2rem -.2rem .5rem #FFFFFF;
+    }
+    .levels:active {
+        box-shadow: inset .6rem .6rem .6rem #c8d0e7, inset -.5rem -.5rem .5rem #FFFFFF;
+    }
+}
