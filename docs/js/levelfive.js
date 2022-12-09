@@ -172,6 +172,14 @@ function answer() {
     document.getElementById("answerInput").value = "";
 }
 
+const autoType = document.getElementById("answerInput");
+
+autoType.addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    answer();
+  }
+});
+
 function resultsButton() {
     if (count === 19) {
         document.getElementById("nextAnswers").textContent = "Resultater";
@@ -219,6 +227,7 @@ function next() {
     document.getElementById("blur").style.filter = "blur(0px)";
     document.getElementById("next").style.display = "none";
     document.getElementById("answers2").style.display = "flex";
+    document.getElementById("answerInput").focus();
 }
 
 function final() {

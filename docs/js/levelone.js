@@ -1,4 +1,5 @@
 const jsonData = {
+     // JSON data object containing information about the quiz module and questions
     "module": {
         "name": "Level-one",
         "questions": 10,
@@ -128,14 +129,14 @@ const jsonData = {
     ]
 }
 
-var count = 0;
-var frames1 = 0;
-var frames2 = 0;
-var frames3 = 0;
-var progress = 0;
-var redProgress = 0;
-var cor = 0;
-var wrong = 0;
+var count = 0; // variable to keep track of the current question number
+var frames1 = 0; // variable to store the number of frames for a certain animation
+var frames2 = 0; // variable to store the number of frames for a certain animation
+var frames3 = 0; // variable to store the number of frames for a certain animation
+var progress = 0; // variable to store the progress made in the quiz
+var redProgress = 0; // variable to store the red progress made in the quiz
+var cor = 0; // variable to store the number of correct answers
+var wrong = 0; // variable to store the number of wrong answers
 
 
 function hint() {
