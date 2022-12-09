@@ -173,7 +173,7 @@ function answer() {
 
 // Get the answer input and nextAnswers button
 const autoType = document.getElementById("answerInput");
-const nextAnswerButton = document.getElementById("next");
+const nextAnswerButton = document.getElementById("nextAnswers");
 
 // Attach a single event listener to the document
 document.addEventListener("keyup", function(event) {
@@ -188,6 +188,7 @@ document.addEventListener("keyup", function(event) {
         nextAnswers();
     }
   }
+
 });
 
 
