@@ -180,13 +180,28 @@ autoType.addEventListener("keyup", function(event) {
     }
 });
 
-const nextAnswerEnter = document.getElementById("nextAnswers");
 
+// hent input feltet
+const nextAnswerEnter = document.getElementById("nextAnswers");
+// event listener til input felt som henter  "keyup" event
 nextAnswerEnter.addEventListener("keyup", function(event) {
+      // keyup event sjekker om enter knappen var trykket på
   if (event.key === "Enter") {
+        // hente fnunksjonen som går til neste
     nextAnswers();
   }
 });
+function nextWithEnter() {
+    var input = document.getElementById("answerInput").value;
+  
+    // Check if the input field is empty
+    if (input === "") {
+      // Show an error message if the input field is empty
+      alert("Please fill in the input field before moving on to the next question.");
+      return;
+    }
+}
+
 
 
 function resultsButton() {
@@ -238,6 +253,7 @@ function next() {
     document.getElementById("answers2").style.display = "flex";
     document.getElementById("answerInput").focus();
 }
+
 
 function final() {
     document.getElementById("blur").style.display = "none";
