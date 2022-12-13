@@ -156,11 +156,11 @@ function answer() {
     let submit = document.getElementById("answerInput").value;
     let submitted = submit.toLowerCase();
     if (submitted == correct) {
-        document.getElementById("nextText").textContent = "Riktig";
+        document.getElementById("nextText").textContent = "Correct";
         cor++;
         progressBar();
     } else {
-        document.getElementById("nextText").textContent = "Feil";
+        document.getElementById("nextText").textContent = "Wrong";
         wrong++;
         failProgressBar();
     }
@@ -194,7 +194,7 @@ document.addEventListener("keyup", function(event) {
 
 function resultsButton() {
     if (count === 19) {
-        document.getElementById("nextAnswers").textContent = "Resultater";
+        document.getElementById("nextAnswers").textContent = "Results";
     }
 }
 
@@ -231,7 +231,7 @@ function next() {
     var question = jsonData.questions[count];
     var image = question.images;
     var correct = question.answers;
-    const visHint = 'Vis hint';
+    const visHint = 'Show hint';
     var hint = question.hint;
     count++;
     document.getElementById("image").src = image;
@@ -248,8 +248,8 @@ function final() {
     document.getElementById("next").style.display = "none";
     document.getElementById("final").style.display = "flex";
     document.getElementById("results").innerHTML =
-        "Du fikk \r\n" + "<span class='cor'>" + cor + "</span>" + " riktig svar\r\n" +
-        "<span class='wrong'>" + wrong + "</span>" + " feil svar";
+        "Du fikk \r\n" + "<span class='cor'>" + cor + "</span>" + " Correct answers\r\n" +
+        "<span class='wrong'>" + wrong + "</span>" + " Wrong answers";
 }
 
 function progressBar() {
