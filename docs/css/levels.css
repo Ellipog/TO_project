@@ -269,7 +269,7 @@ h1 {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-color: #E4EBF5;
         width: 80%;
-        height: 20%;
+        height: 15%;
         margin: auto;
         justify-content: center;
         align-items: center;
@@ -282,5 +282,14 @@ h1 {
         transition: .1s ease-in-out;
         color: #717e9c;
         cursor: pointer;
+    }
+    #answers {
+        width: 95%;
+        height: 50%;
+        margin-bottom: 10%;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        word-break: break-all;
     }
 }

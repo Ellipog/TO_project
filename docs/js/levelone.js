@@ -162,7 +162,7 @@ function answer(answer) {
     if (answer === correct) {
         // If the answer is correct, update the progress bar and display a message
         resultsButton();
-        document.getElementById("nextText").textContent = "Riktig";
+        document.getElementById("nextText").textContent = "Correct";
         count++;
         cor++;
         progressBar();
@@ -174,17 +174,17 @@ function answer(answer) {
 
     // If the answer is incorrect, update the progress bar and display a message
     resultsButton();
-    document.getElementById("nextText").textContent = "Feil";
+    document.getElementById("nextText").textContent = "Wrong";
     count++;
     wrong++;
     failProgressBar();
     blur();
 }
 
-// Set the text content of the element with the ID "nextAnswers" to "Resultater" if test is finished
+// Set the text content of the element with the ID "nextAnswers" to "Results" if test is finished
 function resultsButton() {
     if (count === 9) {
-        document.getElementById("nextAnswers").textContent = "Resultater";
+        document.getElementById("nextAnswers").textContent = "Results";
     }
 }
 
@@ -226,7 +226,7 @@ function next() {
     var image = question.images;
     var correct = question.correct_answer;
     var answers = question.answers;
-    const visHint = 'Vis hint';
+    const visHint = 'Show hint';
     var hint = question.hint;
 
     // Increment the count
@@ -252,8 +252,8 @@ function final() {
 
     // Set the innerHTML of the element with the ID "results" to show the number of correct and wrong answers
     document.getElementById("results").innerHTML =
-        "Du fikk \r\n" + "<span class='cor'>" + cor + "</span>" + " riktig svar\r\n" +
-        "<span class='wrong'>" + wrong + "</span>" + " feil svar";
+        "Du fikk \r\n" + "<span class='cor'>" + cor + "</span>" + " Correct answers\r\n" +
+        "<span class='wrong'>" + wrong + "</span>" + " Wrong answers";
 }
 
 function progressBar() {

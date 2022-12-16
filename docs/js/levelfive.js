@@ -20,19 +20,19 @@ const jsonData = {
             "number": 3,
             "images": "images/salmon.png",
             "answers": "salmon",
-            "hint": "Ikke bread"
+            "hint": "Begynner på sal"
         },
         {
             "number": 4,
             "images": "images/cookies.png",
-            "answers": "Ccookies",
+            "answers": "Cookies",
             "hint": "Ett ord"
         },
         {
             "number": 5,
             "images": "images/hotdogs.png",
             "answers": "hotdogs",
-            "hint": "Et ord"
+            "hint": "Begynner på coo"
         },
         {
             "number": 6,
@@ -44,7 +44,7 @@ const jsonData = {
             "number": 7,
             "images": "images/mug.png",
             "answers": "a mug",
-            "hint": "2 ord"
+            "hint": "2 ord, 4 bokstaver"
         },
         {
             "number": 8,
@@ -56,7 +56,7 @@ const jsonData = {
             "number": 9,
             "images": "images/vegetablepeeler.png",
             "answers": "vegetable peeler",
-            "hint": "2 ord"
+            "hint": "Første ord er vegetable"
         },
         {
             "number": 10,
@@ -68,13 +68,13 @@ const jsonData = {
             "number": 11,
             "images": "images/laptop.png",
             "answers": "laptop",
-            "hint": "ikke 'Blender' eller 'Curling iron'"
+            "hint": "Begynner på lap'"
         },
         {
             "number": 12,
             "images": "images/ceilingfan.png",
             "answers": "ceiling fan",
-            "hint": "2 ord"
+            "hint": "Tak vifte på norsk"
         },
         {
             "number": 13,
@@ -86,13 +86,13 @@ const jsonData = {
             "number": 14,
             "images": "images/headphones.png",
             "answers": "headphones",
-            "hint": "Et ord"
+            "hint": "Hodetelefoner oversatt"
         },
         {
             "number": 15,
             "images": "images/amplifier.png",
             "answers": "amplifier",
-            "hint": "Mest bokstaver"
+            "hint": "Begynner på amp"
         },
         {
             "number": 16,
@@ -110,19 +110,19 @@ const jsonData = {
             "number": 18,
             "images": "images/pants.png",
             "answers": "pants",
-            "hint": "Ikke Hat eller Boots"
+            "hint": "Begynner på pan"
         },
         {
             "number": 19,
             "images": "images/sweater.png",
             "answers": "sweater",
-            "hint": "Begynner på S"
+            "hint": "Rimer på weather"
         },
         {
             "number": 20,
             "images": "images/jeans.png",
             "answers": "jeans",
-            "hint": "Et ord"
+            "hint": "Rimer på beans"
         }
 
     ]
@@ -152,7 +152,6 @@ function hint() {
 nextAnswers();
 
 
-
 function answer() {
     // Decrement the count and retrieve the current question
     count--;
@@ -168,7 +167,7 @@ function answer() {
         cor++;
         progressBar();
     } else {
-        document.getElementById("nextText").textContent = "Feil";
+        document.getElementById("nextText").textContent = "Wrong";
         wrong++;
         failProgressBar();
     }
@@ -180,7 +179,9 @@ function answer() {
     document.getElementById("answerInput").value = "";
 }
 
+// Get the answer input and nextAnswers button
 const autoType = document.getElementById("answerInput");
+const nextAnswerButton = document.getElementById("nextAnswers");
 
 // Let's you submit your answer by pressing Enter
 autoType.addEventListener("keyup", function(event) {
@@ -192,7 +193,7 @@ autoType.addEventListener("keyup", function(event) {
 // Set the text content of the element with the ID "nextAnswers" to "Resultater" if test is finished
 function resultsButton() {
     if (count === 19) {
-        document.getElementById("nextAnswers").textContent = "Resultater";
+        document.getElementById("nextAnswers").textContent = "Results";
     }
 }
 
@@ -233,7 +234,7 @@ function next() {
     var question = jsonData.questions[count];
     var image = question.images;
     var correct = question.answers;
-    const visHint = 'Vis hint';
+    const visHint = 'Show hint';
     var hint = question.hint;
 
     // Increment the count

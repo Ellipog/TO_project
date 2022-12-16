@@ -183,7 +183,7 @@ function answer(answer) {
 // Set the text content of the element with the ID "nextAnswers" to "Resultater" if test is finished
 function resultsButton() {
     if (count === 9) {
-        document.getElementById("nextAnswers").textContent = "Resultater";
+        document.getElementById("nextAnswers").textContent = "Results";
     }
 }
 
@@ -251,8 +251,8 @@ function final() {
 
     // Set the innerHTML of the element with the ID "results" to show the number of correct and wrong answers
     document.getElementById("results").innerHTML =
-        "Du fikk \r\n" + "<span class='cor'>" + cor + "</span>" + " riktig svar\r\n" +
-        "<span class='wrong'>" + wrong + "</span>" + " feil svar";
+        "Du fikk \r\n" + "<span class='cor'>" + cor + "</span>" + " Correct answers\r\n" +
+        "<span class='wrong'>" + wrong + "</span>" + " Wrong answers";
 }
 
 function progressBar() {
