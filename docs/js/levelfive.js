@@ -136,6 +136,7 @@ var progress = 0;
 var redProgress = 0;
 var cor = 0;
 var wrong = 0;
+const visHint = 'Show hint';
 
 function hint() {
     count--;
@@ -234,7 +235,6 @@ function next() {
     var question = jsonData.questions[count];
     var image = question.images;
     var correct = question.answers;
-    const visHint = 'Show hint';
     var hint = question.hint;
 
     // Increment the count

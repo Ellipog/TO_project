@@ -136,6 +136,7 @@ var progress = 0;
 var redProgress = 0;
 var cor = 0;
 var wrong = 0;
+const visHint = 'Vis hint';
 
 function hint() {
     count--;
@@ -225,7 +226,6 @@ function next() {
     var image = question.images;
     var correct = question.correct_answer;
     var answers = question.answers;
-    const visHint = 'Vis hint';
     var hint = question.hint;
 
     // Increment the count
