@@ -252,6 +252,9 @@ h1 {
     word-break: break-all;
     flex-direction: column;
 }
+#answerSumbit{
+    width: 74vh;
+}
 
 @media only screen and (max-width: 600px) {
     #mainMenu {
@@ -291,5 +294,11 @@ h1 {
         display: flex;
         flex-wrap: wrap;
         word-break: break-all;
+    }
+    #answerInput{
+        width: 75%;
+    }
+    #answerSumbit{
+        width: 80%;
     }
 }
