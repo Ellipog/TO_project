@@ -164,4 +164,9 @@ body {
     .levels:active {
         box-shadow: inset .6rem .6rem .6rem #c8d0e7, inset -.5rem -.5rem .5rem #FFFFFF;
     }
+    #otherGames {
+    height: 5%;
+    width: 50%;
+    font-size: 180%;
+    }
 }
