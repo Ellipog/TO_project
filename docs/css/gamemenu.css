@@ -15,10 +15,8 @@ body {
 }
 #otherGames {
     width: 15%;
-    margin-right: 90%;
     border-radius: 10px;
-    margin-left: 1%;
-    padding: 1%;
+    padding: 0.5%;
     background-color: #E4EBF5;
     display: flex;
     justify-content: center;
