@@ -136,13 +136,17 @@ var progress = 0;
 var redProgress = 0;
 var cor = 0;
 var wrong = 0;
+const visHint = 'Show hint';
 
 function hint() {
     count--;
+
+    // Retrieve the question object at the index equal to the value of the count variable in the questions array in the jsonData object
     var question = jsonData.questions[count];
     var hint = question.hint;
-    console.log(hint)
     count++;
+
+    // Set the inner HTML of the element with the ID "hint" to the value of the hint variable
     document.getElementById("hint").innerHTML = hint;
 }
 
@@ -150,13 +154,17 @@ nextAnswers();
 
 
 function answer() {
+    // Decrement the count and retrieve the current question
     count--;
     var question = jsonData.questions[count];
     var correct = question.answers;
     let submit = document.getElementById("answerInput").value;
     let submitted = submit.toLowerCase();
+
+    // Check if the answer is correct
     if (submitted == correct) {
-        document.getElementById("nextText").textContent = "Correct";
+        // If the answer is correct, update the progress bar and display a message
+        document.getElementById("nextText").textContent = "Riktig";
         cor++;
         progressBar();
     } else {
@@ -164,6 +172,7 @@ function answer() {
         wrong++;
         failProgressBar();
     }
+    // Executes other functions to blur and go to the next question
     resultsButton();
     blur();
     count++;
@@ -175,23 +184,14 @@ function answer() {
 const autoType = document.getElementById("answerInput");
 const nextAnswerButton = document.getElementById("nextAnswers");
 
-// Attach a single event listener to the document
-document.addEventListener("keyup", function(event) {
-  // Check if the Enter key was pressed
-  if (event.key === "Enter") {
-    // If the answer input has focus, call the answer function
-    if (autoType === document.activeElement) {
-      answer();
+// Let's you submit your answer by pressing Enter
+autoType.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        answer();
     }
-    // If the nextAnswers button has focus, call the nextAnswers function
-    else if (nextAnswerButton === document.activeElement) {
-        nextAnswers();
-    }
-  }
-
 });
 
-
+// Set the text content of the element with the ID "nextAnswers" to "Resultater" if test is finished
 function resultsButton() {
     if (count === 19) {
         document.getElementById("nextAnswers").textContent = "Results";
@@ -203,22 +203,25 @@ function blur() {
         frames2 = 1;
         var blurCSS = document.getElementById("blur");
         var blurAmount = 0;
+
+        // Set the interval to call the frame function every 20ms
         var id = setInterval(frame, 20);
 
         function frame() {
-            if (blurAmount >= 10) {
+            if (blurAmount >= 10) { // If the blur amount is greater than or equal to 10, stop calling the frame function and set frames2 to 0
                 clearInterval(id);
                 frames2 = 0;
-            } else {
+            } else { // Otherwise, increase the blur amount and update the blur filter on the element
                 blurAmount++;
                 blurCSS.style.filter = "blur(" + blurAmount + "px)";
             }
         }
     }
     document.getElementById("next").style.display = "flex";
-    document.getElementById("answers2").style.display = "none";
+    document.getElementById("answers").style.display = "none";
 }
 
+// If the count is exactly 20, run the final function instead of moving on to the next question
 function nextAnswers() {
     if (count === 20) {
         final();
@@ -228,12 +231,16 @@ function nextAnswers() {
 }
 
 function next() {
+    // Get the image and answers from the jsonData
     var question = jsonData.questions[count];
     var image = question.images;
     var correct = question.answers;
-    const visHint = 'Show hint';
     var hint = question.hint;
+
+    // Increment the count
     count++;
+
+    // Set the innerHTML of the answer elements to the corresponding answers
     document.getElementById("image").src = image;
     document.getElementById("hint").innerHTML = visHint;
     document.getElementById("blur").style.filter = "blur(0px)";
@@ -242,44 +249,48 @@ function next() {
     document.getElementById("answerInput").focus();
 }
 
-
 function final() {
     document.getElementById("blur").style.display = "none";
     document.getElementById("next").style.display = "none";
     document.getElementById("final").style.display = "flex";
+
+    // Set the innerHTML of the element with the ID "results" to show the number of correct and wrong answers
     document.getElementById("results").innerHTML =
-        "Du fikk \r\n" + "<span class='cor'>" + cor + "</span>" + " Correct answers\r\n" +
-        "<span class='wrong'>" + wrong + "</span>" + " Wrong answers";
+        "Du fikk \r\n" + "<span class='cor'>" + cor + "</span>" + " riktig svar\r\n" +
+        "<span class='wrong'>" + wrong + "</span>" + " feil svar";
 }
 
 function progressBar() {
     progress += 5;
-    if (progress >= 9) {
+    if (progress >= 4) { // If the progress is greater than or equal to 1 question answered, remove the rounded corners from the progress bar
         document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
     }
     if (frames1 == 0) {
         frames1 = 1;
         var status = document.getElementById("status");
         var statusText = document.getElementById("statusText");
+
+        // Set the initial width of the progress bar to 10 less than the current progress
         var width = progress - 10;
         var id = setInterval(frame, 10);
 
         function frame() {
-            if (width >= progress) {
+            if (width >= progress) { // If the width is greater than or equal to the current progress, stop calling the frame function and reset frames1 to 0
                 clearInterval(id);
                 frames1 = 0;
-            } else {
+            } else { // Otherwise, increment the width and update the progress bar
                 width++;
                 status.style.width = width + "%";
             }
         }
     }
+    // Update the status text to show the current progress of the quiz
     statusText.innerHTML = (progress + redProgress) / 5 + " / 20";
 }
 
 function failProgressBar() {
     redProgress += 5;
-    if (progress >= 9) {
+    if (progress >= 4) {
         document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
     } else if (progress >= 1) {
         document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
@@ -303,4 +314,3 @@ function failProgressBar() {
     }
     statusText.innerHTML = (progress + redProgress) / 5 + " / 20";
 }
-  

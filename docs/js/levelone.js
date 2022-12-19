@@ -129,15 +129,14 @@ const jsonData = {
     ]
 }
 
-var count = 0; // variable to keep track of the current question number
-var frames1 = 0; // variable to store the number of frames for a certain animation
-var frames2 = 0; // variable to store the number of frames for a certain animation
-var frames3 = 0; // variable to store the number of frames for a certain animation
-var progress = 0; // variable to store the progress made in the quiz
-var redProgress = 0; // variable to store the red progress made in the quiz
-var cor = 0; // variable to store the number of correct answers
-var wrong = 0; // variable to store the number of wrong answers
-
+var count = 0;
+var frames1 = 0;
+var frames2 = 0;
+var frames3 = 0;
+var progress = 0;
+var redProgress = 0;
+var cor = 0;
+var wrong = 0;
 
 function hint() {
     count--;
@@ -259,7 +258,7 @@ function final() {
 
 function progressBar() {
     progress += 10;
-    if (progress >= 9) { // If the progress is greater than or equal to 90%, remove the rounded corners from the progress bar
+    if (progress >= 9) { // If the progress is greater than or equal to 1 question answered, remove the rounded corners from the progress bar
         document.getElementById("redStatus").style.borderRadius = "0px 0px 0px 0px";
     }
     if (frames1 == 0) {
@@ -267,7 +266,7 @@ function progressBar() {
         var status = document.getElementById("status");
         var statusText = document.getElementById("statusText");
 
-        // Set the initial width of the progress bar to 10% less than the current progress
+        // Set the initial width of the progress bar to 10 less than the current progress
         var width = progress - 10;
         var id = setInterval(frame, 10);
 
