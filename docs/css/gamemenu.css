@@ -13,7 +13,25 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #717e9c;
 }
-
+#otherGames {
+    width: 15%;
+    margin-right: 90%;
+    border-radius: 10px;
+    font-size: 200%;
+    background-color: #E4EBF5;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
+    transition: .1s ease-in-out;
+    color: #717e9c;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    word-break: break-all;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .leveltext {
     display: flex;
     align-items: center;
